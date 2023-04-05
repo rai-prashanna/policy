@@ -1116,10 +1116,20 @@ input.role =["CreateJob","DeleteJob","ReadJob","OmcSystemAdministrator","OmcEqui
 allow {
   #allowed_HTTP_methods[input.method]
   input.method in ["GET"]
-  input.resource = ["redfish","v1","AggregationService"]
-  input.role =["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"]
+  input.resource = ["redfish","v1","TaskService","Tasks"]
+  input.role =["CreateJob","DeleteJob","ReadJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator","OmcSystemObserver","OmcEquipmentObserver"]
   #allowed_roles[input.role]
 }
+
+#/redfish/v1/TaskService/Tasks
+allow {
+  #allowed_HTTP_methods[input.method]
+  input.method in ["GET"]
+  input.resource = ["redfish","v1","TaskService","Tasks"]
+  input.role in ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"]
+  #allowed_roles[input.role]
+}
+
 
 # /redfish/v1/AggregationService/AggregationSources
 allow {

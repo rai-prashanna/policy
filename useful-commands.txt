@@ -1,1 +1,0 @@
-curl -X POST --data-binary @test_input1.json http://testserver:32323/v1/data/authz/redfish/v1/policy

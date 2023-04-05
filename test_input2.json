@@ -1,0 +1,7 @@
+{
+  "input":{
+    "path":["redfish","v1","Systems"],
+    "method": "GET",
+    "role": ["DeleteJob","OmcSecurityAdministrator","default-roles-omc","OmcEquipmentAdministrator","offline_access","OmcEquipmentObserver","OmcSystemAdministrator","uma_authorization","CreateJob","OmcSystemObserver"]
+  }
+}

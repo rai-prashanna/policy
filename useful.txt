@@ -1,0 +1,3 @@
+curl -X POST --data-binary @test_input.json http://testserver:32323/v1/data/authz/redfish/v1/policy
+
+[DeleteJob, OmcSecurityAdministrator, OmcEquipmentAdministrator, OmcEquipmentObserver, OmcSystemAdministrator, CreateJob, OmcSystemObserver]

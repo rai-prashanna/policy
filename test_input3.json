@@ -1,0 +1,7 @@
+{
+  "input":{
+    "path":["redfish","v1","Systems"],
+    "method":"GET",
+    "role": ["OmcEquipmentAdministrator","OmcEquipmentObserver"]
+  }
+}

@@ -1,0 +1,4 @@
+curl -X POST --data-binary @test_input1.json http://testserver:32323/v1/data/authz/redfish/v1/policy
+
+docker run --mount type=bind,source="$(pwd)"/policies,target=/policies \
+-p 8181:8181 openpolicyagent/opa run /policies --server

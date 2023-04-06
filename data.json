@@ -1,7 +1,12 @@
 { "permission_role_lookup" :[
 	{
-	 "readTaskService":["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"] 
-
+	 "readTaskService":["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"], 
+	 "createAggregationSource": ["OmcEquipmentAdministrator","CreateJob"] ,	
+      "readAggregationService": ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator","OmcSystemObserver","OmcEquipmentObserver"],
+      "deleteAggregationSource": ["DeleteJob","OmcEquipmentAdministrator"] ,
+      "patchAggregationSource": ["OmcEquipmentAdministrator","CreateJob"],
+      "RoleName": "OmcSystemAdministrator",
+      "removeTask":[""] 
 	}
  ]
 }

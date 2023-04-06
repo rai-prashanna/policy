@@ -1,7 +1,8 @@
 package authz.redfish.v1.policy   
 import future.keywords.if  # this is a special import to enable some newer keywords
 import future.keywords.in
-default allow = false    
+import future.keywords.every
+default allow = false      
 
 #/redfish/v1/
 # METADATA
@@ -22,10 +23,11 @@ allow {
 #/redfish/v1/AggregationService
 allow {    
   #allowed_HTTP_methods[input.method]
-  input.method in ["GET"]
-  input.resource = ["redfish","v1","AggregationService"]
-  input.role =["CreateJob","DeleteJob","ReadJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator","OmcSystemObserver","OmcEquipmentObserver"]
-  #allowed_roles[input.role]
+  input.method = "GET"
+  input.resource ==["redfish","v1","AggregationService"] 
+  every r in input.role{
+    r in {"CreateJob","DeleteJob","ReadJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator","OmcSystemObserver","OmcEquipmentObserver"}
+}
 }
 
 # /redfish/v1/AggregationService/AggregationSources

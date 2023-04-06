@@ -1,0 +1,7 @@
+{ "permission_role_lookup" :[
+	{
+	 "readTaskService":["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"] 
+
+	}
+ ]
+}

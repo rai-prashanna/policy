@@ -28,74 +28,79 @@ allow {
 }
 }
 
-#/AggregationService/AggregationSources
-allow {    
-  input.method == "GET"
-  input.resource ==["AggregationService","AggregationSources"] 
-  every role in input.roles{
-    role in roleslookup.readTaskService
-}
-}
+# #/AggregationService/AggregationSources
+# allow {    
+#   input.method == "GET"
+#   input.resource ==["AggregationService","AggregationSources"] 
+#   every role in input.roles{
+#     role in roleslookup.readTaskService
+# }
+# }
 
-#/AggregationService/AggregationSources
-allow {    
-  input.method == "POST"
-  input.resource ==["AggregationService","AggregationSources"] 
-  every role in input.roles{
-    role in roleslookup.createAggregationSource
-}
-}
+# #/AggregationService/AggregationSources
+# allow {    
+#   input.method == "POST"
+#   input.resource ==["AggregationService","AggregationSources"] 
+#   every role in input.roles{
+#     role in roleslookup.createAggregationSource
+# }
+# }
 
-#/AggregationService/AggregationSources/{id}
-allow {    
-  input.method == "GET"
-  input.resource ==["AggregationService","AggregationSources",id]
-  every role in input.roles{
-    role in roleslookup.createAggregationSource
-}
-}
+# #/AggregationService/AggregationSources/{id}
+# allow {    
+#   input.method == "GET"
+#   input.resource ==["AggregationService","AggregationSources",id]
+#   input.id = id
+#   every role in input.roles{
+#     role in roleslookup.createAggregationSource
+# }
+# }
 
-#/AggregationService/AggregationSources/{id}
-allow {    
-  input.method == "DELETE"
-  input.resource ==["AggregationService","AggregationSources",id] 
-  every role in input.roles{
-    role in roleslookup.deleteAggregationSource
-}
-}
+# #/AggregationService/AggregationSources/{id}
+# allow {    
+#   input.method == "DELETE"
+#   input.resource ==["AggregationService","AggregationSources",id] 
+#   input.id =id
+#   every role in input.roles{
+#     role in roleslookup.deleteAggregationSource
+# }
+# }
 
-#/TaskService/Tasks
-allow {    
-  input.method == "GET"
-  input.resource ==["TaskService","Tasks"] 
-  every role in input.roles{
-    role in roleslookup.readTaskService
-}
-}
+# #/TaskService/Tasks
+# allow {    
+#   input.method == "GET"
+#   input.resource ==["TaskService","Tasks"] 
+#   every role in input.roles{
+#     role in roleslookup.readTaskService
+# }
+# }
 
-#/TaskService/Tasks/{id}
-allow {    
-  input.method == "GET"
-  input.resource ==["TaskService","Tasks",id] 
-  every role in input.roles{
-    role in roleslookup.readTaskService
-}
-}
+# #/TaskService/Tasks/{id}
+# allow {    
+#   input.method == "GET"
+#   input.resource ==["TaskService","Tasks",id] 
+#   input.id =id
+#   every role in input.roles{
+#     role in roleslookup.readTaskService
+# }
+# }
 
-#/TaskService/Tasks/{id}
-allow {    
-  input.method == "DELETE"
-  input.resource ==["TaskService","Tasks",id] 
-  every role in input.roles{
-    role in roleslookup.removeTask
-}
-}
+# #/TaskService/Tasks/{id}
+# allow {    
+#   input.method == "DELETE"
+#   input.resource ==["TaskService","Tasks",id] 
+#   input.id =id
+#   every role in input.roles{
+#     role in roleslookup.removeTask
+# }
+# }
 
-#TaskService/Tasks/{id}/monitor
-allow {    
-  input.method == "GET"
-  input.resource ==["TaskService","Tasks",id,"monitor"] 
-  every role in input.roles{
-    role in roleslookup.readTaskService
-}
-}
+# #TaskService/Tasks/{id}/monitor
+# allow {    
+#   input.method == "GET"
+#   input.resource ==["TaskService","Tasks",id,"monitor"] 
+#   input.id =id
+#   every role in input.roles{
+#     role in roleslookup.readTaskService
+# }
+# }

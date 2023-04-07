@@ -5,8 +5,7 @@
       "readAggregationService": ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator","OmcSystemObserver","OmcEquipmentObserver"],
       "deleteAggregationSource": ["DeleteJob","OmcEquipmentAdministrator"] ,
       "patchAggregationSource": ["OmcEquipmentAdministrator","CreateJob"],
-      "RoleName": "OmcSystemAdministrator",
-      "removeTask":[""] 
+      "removeTask":["OmcSystemAdministrator"] 
 	}
  ]
 }

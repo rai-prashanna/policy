@@ -1,11 +1,35 @@
 { "permission_role_lookup" :[
 	{
-	 "readTaskService":["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"], 
-	 "createAggregationSource": ["OmcEquipmentAdministrator","CreateJob"] ,	
-      "readAggregationService": ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator","OmcSystemObserver","OmcEquipmentObserver"],
-      "deleteAggregationSource": ["DeleteJob","OmcEquipmentAdministrator"] ,
-      "patchAggregationSource": ["OmcEquipmentAdministrator","CreateJob"],
-      "removeTask":["OmcSystemAdministrator"] 
-	}
+    "readTaskService": [
+      "CreateJob",
+      "DeleteJob",
+      "OmcSystemAdministrator",
+      "OmcEquipmentAdministrator",
+      "OmcSecurityAdministrator"
+    ],
+    "createAggregationSource": ["OmcEquipmentAdministrator", "CreateJob"],
+    "readAggregationService": [
+      "CreateJob",
+      "DeleteJob",
+      "OmcSystemAdministrator",
+      "OmcEquipmentAdministrator",
+      "OmcSecurityAdministrator",
+      "OmcSystemObserver",
+      "OmcEquipmentObserver"
+    ],
+    "deleteAggregationSource": ["DeleteJob", "OmcEquipmentAdministrator"],
+    "patchAggregationSource": ["OmcEquipmentAdministrator", "CreateJob"],
+    "removeTask": ["OmcSystemAdministrator"],
+    "readRemoteBackupService": [
+      "OmcSystemAdministrator",
+      "OmcSystemObserver",
+      "OmcEquipmentObserver",
+      "OmcEquipmentAdministrator"
+    ],
+    "RemoteBackupService.CreateAndTransferBackup": [
+      "OmcSystemAdministrator",
+      "OmcEquipmentAdministrator"
+    ]
+  }
  ]
 }

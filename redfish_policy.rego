@@ -95,10 +95,36 @@ input.roles in ["OmcSystemAdministrator"]
 
 #TaskService/Tasks/{id}/monitor
 allow {    
-  input.method == "GET"
-  input.resource ==["TaskService","Tasks",id,"monitor"] 
-  input.id =id
-  every role in input.roles{
+  input1.method == "GET"
+  input1.resources ==["TaskService","Tasks",id,"monitor"] 
+  every role in input1.roles{
+    role in ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"]
+}
+  every role in input1.resources{
     role in ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"]
 }
 }
+
+#Managers/{id}/Oem/Ericsson_2/RemoteBackupService
+allow {    
+  input.method == "GET"
+  input.resources ==["Managers",id,"Oem","Ericsson_2","RemoteBackupService"] 
+  input.id=id
+  input.roles in [
+      "OmcSystemAdministrator",
+      "OmcSystemObserver",
+      "OmcEquipmentObserver",
+      "OmcEquipmentAdministrator"
+    ]
+  }
+
+#"Managers/{id}/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+allow {    
+  input.method == "POST"
+  input.resources ==["Managers",id,"Oem","Ericsson_2","RemoteBackupService","Actions","Ericsson2RemoteBackupService.CreateAndTransferBackup"] 
+  input.id=id
+  input.roles in [
+      "OmcSystemAdministrator",
+      "OmcEquipmentAdministrator"
+    ]
+  }

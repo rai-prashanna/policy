@@ -93,18 +93,6 @@ allow {
 input.roles in ["OmcSystemAdministrator"]
 }
 
-#TaskService/Tasks/{id}/monitor
-allow {    
-  input1.method == "GET"
-  input1.resources ==["TaskService","Tasks",id,"monitor"] 
-  every role in input1.roles{
-    role in ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"]
-}
-  every role in input1.resources{
-    role in ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"]
-}
-}
-
 #Managers/{id}/Oem/Ericsson_2/RemoteBackupService
 allow {    
   input.method == "GET"

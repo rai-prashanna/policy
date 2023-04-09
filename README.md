@@ -50,6 +50,23 @@ authz.redfish.v1.policy
   }
 }
 
+*********************
+{"input":
+{
+    "resource": "/redfish/v1/Managers/my-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+    "method": "POST",
+     "roles": [
+      "DeleteJob",
+      "OmcSecurityAdministrator",
+      "OmcEquipmentAdministrator",
+      "OmcEquipmentObserver",
+      "OmcSystemAdministrator",
+      "CreateJob",
+      "OmcSystemObserver"
+    ]
+}
+}
+
 
 
 For Kubernetes cluster installation we will use kubespray. All installation activities will be performed on k8sm1 server.
@@ -184,3 +201,29 @@ Verify NFS mount on kms1
 Volume Provisioning (NFS)
  Install nfs-client-provisioner
 		helm install stable/nfs-client-provisioner --set nfs.server=192.168.111.120 --set nfs.path=/data
+
+
+
+{
+  "input": {
+    "resource": [
+      "Managers",
+      "my-pod",
+      "Oem",
+      "Ericsson_2",
+      "RemoteBackupService",
+      "Actions",
+      "Ericsson2RemoteBackupService.CreateAndTransferBackup"],
+    "method": "POST",
+    "id": "my-pod",
+    "roles": [
+      "DeleteJob",
+      "OmcSecurityAdministrator",
+      "OmcEquipmentAdministrator",
+      "OmcEquipmentObserver",
+      "OmcSystemAdministrator",
+      "CreateJob",
+      "OmcSystemObserver"
+    ]
+  }
+}

@@ -5,7 +5,6 @@ import future.keywords.every
 import data.permission_role_lookup as roleslookup    
 default allow = false      
 
-#/
 # METADATA
 # scope: rule
 # schemas:
@@ -13,106 +12,111 @@ default allow = false
 #   - data.acl: schema["acl-schema"]
 
 #files/upload/updateservice/package
-allow {    
-  input.method == "POST"  
-  input.resource == ["files","upload","updateservice","package"]
-  input.roles =["OmcEquipmentAdministrator"]
+allow if {
+	input.method == "POST"
+	m := input.resource
+	regex.match("files/upload/updateservice/package", m)
+	every role in ["OmcEquipmentAdministrator"] {
+		role in input.roles
+	}
 }
 
 # #/AggregationService
-# allow {    
-#   input.method == "GET"
-#   input.resource ==["AggregationService"] 
-#   every role in input.roles{
-#     role in ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"]
-# }
-# }
+allow if {
+	input.method == "GET"
+	m := input.resource
+	regex.match("AggregationService", m)
+	every role in ["CreateJob", "DeleteJob", "OmcSystemAdministrator", "OmcEquipmentAdministrator", "OmcSecurityAdministrator"] {
+		role in input.roles
+	}
+}
 
 # #/AggregationService/AggregationSources
-# allow {    
-#   input.method == "GET"
-#   input.resource ==["AggregationService","AggregationSources"] 
-#   every role in input.roles{
-#     role in ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"]
-# }
-# }
+allow if {
+	input.method == "GET"
+	m := input.resource
+	regex.match("AggregationService/AggregationSources", m)
+	every role in ["CreateJob", "DeleteJob", "OmcSystemAdministrator", "OmcEquipmentAdministrator", "OmcSecurityAdministrator"] {
+		role in input.roles
+	}
+}
 
 # #/AggregationService/AggregationSources
-# allow {    
-#   input.method == "POST"
-#   input.resource ==["AggregationService","AggregationSources"] 
-#   every role in input.roles{
-#     role in ["OmcEquipmentAdministrator","CreateJob"]
-# }
-# }
+allow if {
+	input.method == "POST"
+	m := input.resource
+	regex.match("AggregationService/AggregationSources", m)
+	every role in ["OmcEquipmentAdministrator", "CreateJob"] {
+		role in input.roles
+	}
+}
 
 # #/AggregationService/AggregationSources/{id}
-# allow {    
-#   input.method == "GET"
-#   input.resource ==["AggregationService","AggregationSources",id]
-#   input.id = id
-#   every role in input.roles{
-#     role in ["OmcEquipmentAdministrator","CreateJob"]
-# }
-# }
+allow if {
+	input.method == "GET"
+	m := input.resource
+	regex.match("AggregationService/AggregationSources/[^/]", m)
+	every role in ["OmcEquipmentAdministrator", "CreateJob"] {
+		role in input.roles
+	}
+}
 
 # #/AggregationService/AggregationSources/{id}
-# allow {    
-#   input.method == "DELETE"
-#   input.resource ==["AggregationService","AggregationSources",id] 
-#   input.id =id
-#   every role in input.roles{
-#     role in ["DeleteJob","OmcEquipmentAdministrator"]
-# }
-# }
+allow if {
+	input.method == "DELETE"
+	m := input.resource
+	regex.match("AggregationService/AggregationSources/[^/]", m)
+	every role in ["DeleteJob", "OmcEquipmentAdministrator"] {
+		role in input.roles
+	}
+}
 
 # #/TaskService/Tasks
-# allow {    
-#   input.method == "GET"
-#   input.resource ==["TaskService","Tasks"] 
-#   every role in input.roles{
-#     role in ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"]
-# }
-# }
+allow if {
+	input.method == "GET"
+	m := input.resource
+	regex.match("TaskService/Tasks", m)
+	every role in ["CreateJob", "DeleteJob", "OmcSystemAdministrator", "OmcEquipmentAdministrator", "OmcSecurityAdministrator"] {
+		role in input.roles
+	}
+}
 
 # #/TaskService/Tasks/{id}
-# allow {    
-#   input.method == "GET"
-#   input.resource ==["TaskService","Tasks",id] 
-#   input.id =id
-#   every role in input.roles{
-#     role in ["CreateJob","DeleteJob","OmcSystemAdministrator","OmcEquipmentAdministrator","OmcSecurityAdministrator"]
-# }
-# }
+allow if {
+	input.method == "GET"
+	m := input.resource
+	regex.match("TaskService/Tasks/[^/]", m)
+	every role in ["CreateJob", "DeleteJob", "OmcSystemAdministrator", "OmcEquipmentAdministrator", "OmcSecurityAdministrator"] {
+		role in input.roles
+	}
+}
 
-# #/TaskService/Tasks/{id}
-# allow {    
-#   input.method == "DELETE"
-#   input.resource ==["TaskService","Tasks",id] 
-#   input.id =id
-# input.roles in ["OmcSystemAdministrator"]
-# }
+#/TaskService/Tasks/{id}
+allow if {
+	input.method == "DELETE"
+	m := input.resource
+	regex.match("TaskService/Tasks/[^/]", m)
+	every role in ["OmcSystemAdministrator"] {
+		role in input.roles
+	}
+}
 
-# #Managers/{id}/Oem/Ericsson_2/RemoteBackupService
-# allow {    
-#   input.method == "GET"
-#   input.resource == ["Managers",id,"Oem","Ericsson_2","RemoteBackupService"] 
-#   input.id = id
-#   input.roles in [
-#       "OmcSystemAdministrator",
-#       "OmcSystemObserver",
-#       "OmcEquipmentObserver",
-#       "OmcEquipmentAdministrator"
-#     ]
-#   }
+# Managers/[^/]+/Oem/Ericsson_2/RemoteBackupService
+allow if {
+	m := input.resource
+	regex.match("Managers/[^/]+/Oem/Ericsson_2/RemoteBackupService", m)
+	input.method == "GET"
+	every role in ["OmcSystemAdministrator", "OmcEquipmentAdministrator", "OmcSystemObserver", "OmcEquipmentObserver"] {
+		role in input.roles
+	}
+}
 
 #"Managers/{id}/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
-allow {
-    m := input.resource
-    regex.match("Managers/[^/]+/Oem/Ericsson_2/RemoteBackupService/Actions/", m)
-    input.method== "POST"
-    every role in ["OmcSystemAdministrator","OmcEquipmentAdministrator"]{
-    role in input.roles
+allow if {
+	m := input.resource
+	regex.match("Managers/[^/]+/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup", m)
+	input.method == "POST"
+	every role in ["OmcSystemAdministrator", "OmcEquipmentAdministrator"] {
+		role in input.roles
+	}
 }
-}
-

@@ -53,7 +53,7 @@ authz.redfish.v1.policy
 *********************
 {"input":
 {
-    "resource": "/redfish/v1/Managers/my-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+    "resource": "files/upload/updateservice/package",
     "method": "POST",
      "roles": [
       "DeleteJob",
@@ -66,7 +66,33 @@ authz.redfish.v1.policy
     ]
 }
 }
+*******************************
 
+{
+  "input1": {
+    "resources": [
+      "Managers/my-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+      "Managers/my-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+      "Managers/my-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup"
+    ],
+    "methods": [
+      "POST",
+      "POST",
+      "POST"
+    ],
+    "roles": [
+      "DeleteJob",
+      "OmcSecurityAdministrator",
+      "OmcEquipmentAdministrator",
+      "OmcEquipmentObserver",
+      "OmcSystemAdministrator",
+      "CreateJob",
+      "OmcSystemObserver"
+    ]
+  }
+}
+
+**********************************
 
 
 For Kubernetes cluster installation we will use kubespray. All installation activities will be performed on k8sm1 server.

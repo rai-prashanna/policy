@@ -1,8 +1,8 @@
-package authz.redfish.v1.policy   
+package authz.redfish.v1.policy  
+import data.permission_role_lookup as roleslookup    
 import future.keywords.if  # this is a special import to enable some newer keywords
 import future.keywords.in
 import future.keywords.every
-import data.permission_role_lookup as roleslookup    
 default allow = false      
 
 # METADATA
@@ -117,6 +117,26 @@ allow if {
 	regex.match("Managers/[^/]+/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup", m)
 	input.method == "POST"
 	every role in ["OmcSystemAdministrator", "OmcEquipmentAdministrator"] {
+		role in input.roles
+	}
+}
+
+#TaskService/Tasks/[^/]+/
+allow if {
+	m := input.resource
+	regex.match("TaskService/Tasks/[^/]+/", m)
+	input.method == "GET"
+	every role in ["CreateJob", "DeleteJob", "OmcSystemAdministrator", "OmcEquipmentAdministrator", "OmcSecurityAdministrator"] {
+		role in input.roles
+	}
+}
+
+#TaskService/Tasks/[^/]+/monitor/
+allow if {
+	m := input.resource
+	regex.match("TaskService/Tasks/[^/]+/monitor/", m)
+	input.method == "GET"
+	every role in ["CreateJob", "DeleteJob", "OmcSystemAdministrator", "OmcEquipmentAdministrator", "OmcSecurityAdministrator"] {
 		role in input.roles
 	}
 }

@@ -143,6 +143,18 @@ allow if {
 	}
 }
 
+#Bulk TaskService/Tasks/[^/]+/
+allow if {
+	input.method == "GET"
+	every item in input.resources {
+		m := item
+		regex.match("TaskService/Tasks/[^/]+/", m)
+		every role in ["CreateJob", "DeleteJob", "OmcSystemAdministrator", "OmcEquipmentAdministrator", "OmcSecurityAdministrator"] {
+			role in input.roles
+		}
+	}
+}
+
 #TaskService/Tasks/[^/]+/monitor/
 allow if {
 	m := input.resource
@@ -150,5 +162,17 @@ allow if {
 	input.method == "GET"
 	every role in ["CreateJob", "DeleteJob", "OmcSystemAdministrator", "OmcEquipmentAdministrator", "OmcSecurityAdministrator"] {
 		role in input.roles
+	}
+}
+
+# Bulk TaskService/Tasks/[^/]+/monitor/
+allow if {
+	input.method == "GET"
+	every item in input.resources {
+		m := item
+		regex.match("TaskService/Tasks/[^/]+/monitor/", m)
+		every role in ["CreateJob", "DeleteJob", "OmcSystemAdministrator", "OmcEquipmentAdministrator", "OmcSecurityAdministrator"] {
+			role in input.roles
+		}
 	}
 }

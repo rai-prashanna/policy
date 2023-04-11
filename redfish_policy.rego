@@ -121,6 +121,18 @@ allow if {
 	}
 }
 
+#"Managers/{id}/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+allow if {
+	input.method == "POST"
+	every item in input.resources {
+		m := item
+		regex.match("Managers/[^/]+/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup", m)
+		every role in ["OmcSystemAdministrator", "OmcEquipmentAdministrator"] {
+			role in input.roles
+		}
+	}
+}
+
 #TaskService/Tasks/[^/]+/
 allow if {
 	m := input.resource

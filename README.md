@@ -257,3 +257,6 @@ Volume Provisioning (NFS)
 
 ****************
 curl -X POST --data-binary @policy_1_input_1.json http://localhost:8181/v1/data/authz/orders/policy2 
+
+
+https://play.openpolicyagent.org/p/QpaWPAKNlo

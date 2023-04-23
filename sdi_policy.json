@@ -1,0 +1,703 @@
+{
+  "Statements": [
+    {
+      "Method": "POST",
+      "Resource": "files/upload/updateservice/package",
+      "Permission": "uploadPackage"
+    },
+    {
+      "Method": "GET",
+      "Resource": "AggregationService",
+      "Permission": "readAggregationService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "AggregationService/AggregationSources",
+      "Permission": "readAggregationService"
+    },
+    {
+      "Method": "POST",
+      "Resource": "AggregationService/AggregationSources",
+      "Permission": "createAggregationSource"
+    },
+    {
+      "Method": "GET",
+      "Resource": "AggregationService/AggregationSources/[^/]",
+      "Permission": "readAggregationService"
+    },
+    {
+      "Method": "DELETE",
+      "Resource": "AggregationService/AggregationSources/[^/]",
+      "Permission": "deleteAggregationSource"
+    },
+    {
+      "Method": "PATCH",
+      "Resource": "AggregationService/AggregationSources/[^/]",
+      "Permission": "patchAggregationSource"
+    },
+    {
+      "Method": "POST",
+      "Resource": "AggregationService/AggregationSources/[^/]+/Actions/Oem/Ericsson2AggregationSource.RegenerateSNMPCredentials",
+      "Permission": "updateSnmpCredentials"
+    },
+    {
+      "Method": "POST",
+      "Resource": "AggregationService/AggregationSources/[^/]+/Actions/Oem/Ericsson2AggregationSource.SetLogServer",
+      "Permission": "setLogServer"
+    },
+    {
+      "Method": "GET",
+      "Resource": "AggregationService/AggregationSources/[^/]+/Oem/Ericsson_2/TrustedPublicKeys",
+      "Permission": "readPublicKey"
+    },
+    {
+      "Method": "POST",
+      "Resource": "AggregationService/AggregationSources/[^/]+/Oem/Ericsson_2/TrustedPublicKeys",
+      "Permission": "createPublicKey"
+    },
+    {
+      "Method": "GET",
+      "Resource": "AggregationService/AggregationSources/[^/]+/Oem/Ericsson_2/TrustedPublicKeys/[^/]+",
+      "Permission": "readPublicKey"
+    },
+    {
+      "Method": "DELETE",
+      "Resource": "AggregationService/AggregationSources/[^/]+/Oem/Ericsson_2/TrustedPublicKeys/[^/]+",
+      "Permission": "deletePublicKey"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/AlarmService",
+      "Permission": "readAlarm"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/AlarmService/Alarms",
+      "Permission": "readAlarm"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/AlarmService/ExternalAlarms",
+      "Permission": "readExternalAlarm"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/AlarmService/InternalAlarms",
+      "Permission": "readInternalAlarm"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/Alarms",
+      "Permission": "sdipod.readAlarm"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/AlarmService/Alarms/[^/]",
+      "Permission": "readAlarm"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/Bridges",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Bridges",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Bridges/[^/]",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Bridges/[^/]+/BridgePorts",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Bridges/[^/]+/BridgePorts/[^/]",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Bridges/[^/]+/VLANs",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Bridges/[^/]+/VLANs/[^/]",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Chassis",
+      "Permission": "readChassis"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Chassis/[^/]",
+      "Permission": "readChassis"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Chassis/[^/]+/Power",
+      "Permission": "readChassis"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Chassis/[^/]+/Thermal",
+      "Permission": "readChassis"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/DataBridges",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/DataBridges",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/DataBridges/[^/]",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/DataBridges/[^/]+/BridgePorts",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/DataBridges/[^/]+/BridgePorts/[^/]",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/DataBridges/[^/]+/VLANs",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/DataBridges/[^/]+/VLANs/[^/]",
+      "Permission": "readBridges"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers",
+      "Permission": "readManagers"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]",
+      "Permission": "readManagers"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/LogServices",
+      "Permission": "readLogService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/LogServices/[^/]",
+      "Permission": "readLogService"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/LogServices/[^/]+/Actions/Oem/Ericsson2LogService.RetrieveLog",
+      "Permission": "retrieveLogs"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/NetworkProtocol",
+      "Permission": "readNetworkProtocol"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteBackupService",
+      "Permission": "readRemoteBackupService"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+      "Permission": "RemoteBackupService.CreateAndTransferBackup"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService",
+      "Permission": "readRemoteUpdateService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Packages",
+      "Permission": "readRemoteUpdateService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Packages/[^/]",
+      "Permission": "readRemoteUpdateService"
+    },
+    {
+      "Method": "DELETE",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Packages/[^/]",
+      "Permission": "RemoteUpdateService.RemoveSoftwarePackage"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/SoftwareVersions",
+      "Permission": "readRemoteUpdateService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/SoftwareVersions/[^/]",
+      "Permission": "readRemoteUpdateService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs",
+      "Permission": "readRemoteUpdateService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/[^/]",
+      "Permission": "readRemoteUpdateService"
+    },
+    {
+      "Method": "DELETE",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/[^/]",
+      "Permission": "RemoteUpdateService.RemoveAssetUpgradeJob"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.UploadSoftwarePackage",
+      "Permission": "RemoteUpdateService.UploadSoftwarePackage"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.RemoveSoftwareVersion",
+      "Permission": "RemoteUpdateService.RemoveSoftwareVersion"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.UpdateManager",
+      "Permission": "RemoteUpdateService.UpdateManager"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.UpdateManagerCancel",
+      "Permission": "RemoteUpdateService.UpdateManagerCancel"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.CreateAssetUpgradeJob",
+      "Permission": "RemoteUpdateService.CreateAssetUpgradeJob"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/[^/]+/Actions/Ericsson2AssetUpgradeJob.Start",
+      "Permission": "RemoteUpdateService.StartAssetUpgradeJob"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/[^/]+/Actions/Ericsson2AssetUpgradeJob.Abort",
+      "Permission": "RemoteUpdateService.AbortAssetUpgradeJob"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/Certificates",
+      "Permission": "createCertificate"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Certificates",
+      "Permission": "readCertificate"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Certificates/[^/]",
+      "Permission": "readCertificate"
+    },
+    {
+      "Method": "DELETE",
+      "Resource": "Managers/[^/]+/Certificates/[^/]",
+      "Permission": "removeCertificate"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/TrustedCertificates",
+      "Permission": "createCertificate"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/TrustedCertificates",
+      "Permission": "readCertificate"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/TrustedCertificates/[^/]",
+      "Permission": "readCertificate"
+    },
+    {
+      "Method": "DELETE",
+      "Resource": "Managers/[^/]+/Oem/Ericsson_2/TrustedCertificates/[^/]",
+      "Permission": "removeCertificate"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Networks",
+      "Permission": "readNetworks"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Networks/[^/]",
+      "Permission": "readNetworks"
+    },
+    {
+      "Method": "DELETE",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Networks/[^/]",
+      "Permission": "removeNetwork"
+    },
+    {
+      "Method": "PATCH",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Networks/[^/]",
+      "Permission": "updateNetwork"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/PmJobConfiguration",
+      "Permission": "readPmJobConfiguration"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/Racks",
+      "Permission": "readRacks"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Racks",
+      "Permission": "readRacks"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Racks/[^/]",
+      "Permission": "readRacks"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/RedfishAssets",
+      "Permission": "readRedfishAssets"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/RedfishAssets/[^/]",
+      "Permission": "readRedfishAssets"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/RedfishAssets/[^/]+/Actions/Ericsson2RedfishAsset.RemoveCredential",
+      "Permission": "RedfishAsset.RemoveCredential"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/RedfishAssets/[^/]+/Actions/Ericsson2RedfishAsset.SetCredential",
+      "Permission": "RedfishAsset.SetCredential"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/Relays",
+      "Permission": "readRelays"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Relays",
+      "Permission": "readRelays"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Relays/[^/]",
+      "Permission": "readRelays"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods",
+      "Permission": "readSDIPods"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]",
+      "Permission": "readSDIPods"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/Actions/Ericsson2SDIPod.ModifyPmJob",
+      "Permission": "SDIPod.ModifyPmJob"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/RedfishAssets",
+      "Permission": "readRedfishAssets"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/Systems",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/TopologyLinks",
+      "Permission": "readTopologyLink"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/VPODs",
+      "Permission": "readVPODs"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/VPODs",
+      "Permission": "createVPOD"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/SDIPods/[^/]+/Switches",
+      "Permission": "readSwitches"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Switches",
+      "Permission": "readSwitches"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Switches/[^/]",
+      "Permission": "readSwitches"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Switches/[^/]+/ExternalLinks",
+      "Permission": "readSwitches"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Switches/[^/]+/ExternalLinks/[^/]",
+      "Permission": "readSwitches"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Switches/[^/]+/Pims",
+      "Permission": "readSwitches"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/Switches/[^/]+/Pims/[^/]",
+      "Permission": "readSwitches"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "PATCH",
+      "Resource": "Systems/[^/]",
+      "Permission": "updateComputerSystem"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/Oem/Ericsson_2/FwComponents",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/Oem/Ericsson_2/FwComponents/[^/]",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/Processors",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/Processors/[^/]",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/SimpleStorage",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/SimpleStorage/[^/]",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/Memory",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/Memory/[^/]",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Systems/[^/]+/Actions/ComputerSystem.Reset",
+      "Permission": "ComputerSystem.Reset"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Systems/[^/]+/Actions/Oem/Ericsson2ComputerSystem.BootSourceOverride",
+      "Permission": "ComputerSystem.BootSourceOverride"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/EthernetInterfaces",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/EthernetInterfaces/[^/]",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Systems/[^/]+/ResetActionInfo",
+      "Permission": "readSystems"
+    },
+    {
+      "Method": "GET",
+      "Resource": "UpdateService",
+      "Permission": "readUpdateService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "UpdateService/Oem/Ericsson_2/Packages",
+      "Permission": "readUpdateService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "UpdateService/Oem/Ericsson_2/Packages/[^/]",
+      "Permission": "readUpdateService"
+    },
+    {
+      "Method": "DELETE",
+      "Resource": "UpdateService/Oem/Ericsson_2/Packages/[^/]",
+      "Permission": "removePackage"
+    },
+    {
+      "Method": "GET",
+      "Resource": "TaskService",
+      "Permission": "readTaskService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "TaskService/Tasks",
+      "Permission": "readTaskService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "TaskService/Tasks/[^/]",
+      "Permission": "readTaskService"
+    },
+    {
+      "Method": "DELETE",
+      "Resource": "TaskService/Tasks/[^/]",
+      "Permission": "removeTask"
+    },
+    {
+      "Method": "GET",
+      "Resource": "TaskService/Tasks/[^/]+/monitor",
+      "Permission": "readTaskService"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/TopologyLinks",
+      "Permission": "readTopologyLink"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/TopologyLinks/[^/]",
+      "Permission": "readTopologyLink"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/VPODs",
+      "Permission": "readVPODs"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]",
+      "Permission": "readVPODs"
+    },
+    {
+      "Method": "PATCH",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]",
+      "Permission": "updateVPOD"
+    },
+    {
+      "Method": "DELETE",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]",
+      "Permission": "removeVPOD"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Actions/Ericsson2VPOD.Allocate",
+      "Permission": "VPOD.Allocate"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Actions/Ericsson2VPOD.Deallocate",
+      "Permission": "VPOD.Deallocate"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Systems",
+      "Permission": "readVPODs"
+    },
+    {
+      "Method": "GET",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Systems/[^/]",
+      "Permission": "readVPODs"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Actions/Ericsson2VPOD.ConnectManualSelectedPorts",
+      "Permission": "VPOD.ConnectManualSelectedPorts"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Actions/Ericsson2VPOD.CreateL2Network",
+      "Permission": "VPOD.CreateL2Network"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Actions/Ericsson2VPOD.CreateL2NetworkWithAutomaticConnectivityForSelectedPorts",
+      "Permission": "VPOD.CreateL2NetworkWithAutomaticConnectivityForSelectedPorts"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Actions/Ericsson2VPOD.CreateL2NetworkWithAutomaticConnectivityForAllPorts",
+      "Permission": "VPOD.CreateL2NetworkWithAutomaticConnectivityForAllPorts"
+    },
+    {
+      "Method": "POST",
+      "Resource": "Oem/Ericsson_2/VPODs/[^/]+/Actions/Ericsson2VPOD.DisconnectManualSelectedPorts",
+      "Permission": "VPOD.DisconnectManualSelectedPorts"
+    }
+  ]
+}
+
+
+
+

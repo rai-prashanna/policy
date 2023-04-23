@@ -1,0 +1,39 @@
+{
+    "roles": {
+        "raghu": [
+            "admin"
+        ],
+        "vinay": [
+            "editor"
+        ],
+        "ashok": [
+            "author"
+        ],
+        "sushil": [
+            "contributor"
+        ],
+        "ashutosh": [
+            "subscriber"
+        ]
+    },
+    "permissions": {
+        "subscriber": [
+            {
+                "action": "read",
+                "type": "post"
+            }
+        ],
+        "contributor": [
+            {
+                "action": "read",
+                "type": "post"
+            }
+        ],
+        "author": [
+            {
+                "action": "read",
+                "type": "post"
+            }
+        ]
+    }
+}

@@ -1,3 +1,0 @@
-{"rules_from_file":
-{"rules":  ["Managers/[^/]+/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
-"TaskService/Tasks/[^/]+/"]} }

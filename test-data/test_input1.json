@@ -1,0 +1,12 @@
+{
+    "input":{
+    "method": "POST",
+    "resource": "files/upload/updateservice/package",
+    "roles": [
+        "OmcEquipmentObserver",
+        "CreateJob",
+        "DeleteJob",
+        "OmcEquipmentAdministrator"
+    ]
+}
+}

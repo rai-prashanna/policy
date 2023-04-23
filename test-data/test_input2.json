@@ -1,0 +1,19 @@
+{
+    "input":{
+    "method": "GET",
+    "resources": [
+        "/Managers/my-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+        "/TaskService/Tasks/1/",
+        "/Managers/prai-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+        "/Managers/vanja-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+        "files/upload/updateservice/package",
+        "/TaskService/Tasks/3/"
+    ],
+    "roles": [
+        "OmcEquipmentObserver",
+        "CreateJob",
+        "DeleteJob",
+        "OmcEquipmentAdministrator"
+    ]
+}
+}

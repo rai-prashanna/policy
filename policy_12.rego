@@ -1,4 +1,4 @@
-package authz.redfish.v1.policy   
+package test.authz.redfish.v1.policy   
 import future.keywords.if  # this is a special import to enable some newer keywords
 import future.keywords.in
 default allow = false    

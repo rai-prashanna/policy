@@ -1,4 +1,4 @@
-# policy
+# OPA example
 
 
 ## create bundle and expose as REST API Server 
@@ -6,9 +6,23 @@
 
 * /home/epraria/programs/opa_linux_amd64 run --server -b bundle.tar.gz
 
-## optimize bundle creation 
+## optimize bundle creation  with annotations
 * /home/epraria/programs/opa_linux_amd64 build -b policies/ -O=1 
+* write annotations within rego file
+* For example: The following contents needs to include above head of rule of rego file.
+  
+```
+# METADATA
+# title: authorize 
+# description: A rule that determines if input is allowed.
+# authors:
+# - Prashanna Rai <prai931024@gmail.com>
+# entrypoint: true
+```
+## optimize bundle creation  with entrypoint
+* /home/epraria/programs/opa_linux_amd64 build -b test33/ -O=1 --entrypoint omc/allow
 
+* /home/epraria/programs/opa_linux_amd64 build -b pathOfregoFiles/ -O=1 --entrypoint packageName/rule-Head
 ## start OPA as REST-API-server 
 docker run --mount type=bind,source="$(pwd)"/,target=/policies -p 8181:8181 openpolicyagent/opa run /policies --server
 
@@ -64,4 +78,9 @@ curl -X POST --data-binary @test_input2.json http://localhost:8181/v1/data/authz
 curl -X POST --data-binary @policy_1_input_1.json http://localhost:8181/v1/data/authz/orders/policy2 
 
 
-https://play.openpolicyagent.org/p/QpaWPAKNlo
+* https://play.openpolicyagent.org/p/QpaWPAKNlo
+
+My useful links 
+* https://play.openpolicyagent.org/p/ZBnurgkbUy
+
+* https://play.openpolicyagent.org/p/zoKO1NWSrS

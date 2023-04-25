@@ -1,0 +1,15 @@
+{
+    "input": {
+      "method": "GET ",
+      "resource": "Systems ",
+      "roles": [
+        "OmcSecurityAdministrator ",
+        "DeleteJob ",
+        "OmcEquipmentAdministrator ",
+        "OmcEquipmentObserver ",
+        "OmcSystemAdministrator ",
+        "CreateJob ",
+        "OmcSystemObserver "
+      ]
+    }
+  }

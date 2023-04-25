@@ -5,6 +5,12 @@ import data.Statements as emc_policies
 
 import future.keywords
 
+# METADATA
+# title: single authorize 
+# description: A rule that determines if single input is allowed.
+# authors:
+# - Prashanna Rai <prai931024@gmail.com>
+# entrypoint: true
 allow if {
 	policy = emc_policies[_]
 	regex.match(policy.Resource, input.resource)
@@ -18,6 +24,12 @@ findpermissionByRole(r) = permission if {
 	permission := emc_roles[r]
 }
 
+# METADATA
+# title: bulk authorize 
+# description: A rule that determines if bulk input is allowed.
+# authors:
+# - Prashanna Rai <prai931024@gmail.com>
+# entrypoint: true
 batch_allow = [url |
 	some i
 	url := input.resources[i]

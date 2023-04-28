@@ -5,6 +5,7 @@
 * opa build -b policies/
 
 * /home/epraria/programs/opa_linux_amd64 run --server -b bundle.tar.gz
+* /home/epraria/programs/opa_linux_amd64 run bundle.tar.gz --server
 
 ## optimize bundle creation  with annotations
 * /home/epraria/programs/opa_linux_amd64 build -b policies/ -O=1 
@@ -84,3 +85,49 @@ My useful links
 * https://play.openpolicyagent.org/p/ZBnurgkbUy
 
 * https://play.openpolicyagent.org/p/zoKO1NWSrS
+
+
+rate(permissionHandler_authorization_requests_requests_latency_seconds_sum[60m])/rate(permissionHandler_authorization_requests_requests_latency_seconds_count[60m])
+
+rate(opa_authorization_requests_requests_latency_seconds_sum[60m])/rate(opa_authorization_requests_requests_latency_seconds_count[60m])
+
+go_memstats_heap_alloc_bytes{job="opa",instance="testserver:32323"}/1000000
+
+go_threads{job="opa"}
+
+go_gc_heap_allocs_by_size_bytes_bucket{}
+
+http_request_duration_seconds_bucket
+
+(rate(opa_authorization_requests_requests_latency_seconds_sum[10m])/rate(opa_authorization_requests_requests_latency_seconds_count[10m]))/
+(rate(permissionHandler_authorization_requests_requests_latency_seconds_sum[10m])/rate(permissionHandler_authorization_requests_requests_latency_seconds_count[10m]))
+
+
+node-exporter-full
+
+
+* git clone https://github.com/borgeby/jarl
+* cd jarl/core/
+* lein run /repo/policy2/bundle.tar.gz --input /repo/policy2/data.json 
+  
+* /home/epraria/programs/opa_linux_amd64 build --target plan policy.rego
+* mvn install:install-file -Dfile=repo/jarl/core/target/jarl-0.1.0-SNAPSHOT-standalone.jar -DgroupId=com.prai -DartifactId=jarl -Dversion=0.1.0-SNAPSHOT -Dpackaging=jar -DgeneratePom=true
+
+
+* mvn install:install-file -Dfile=/repo/jarl/api/build/libs/jarl-api-0.1.0-SNAPSHOT.jar -DgroupId=com.prai -DartifactId=jarl -Dversion=0.1.0-SNAPSHOT -Dpackaging=jar
+
+* opa eval --data policy.rego --input input.json
+
+* opa eval --data file:///path/to/file.json 'data'
+
+* /home/epraria/programs/opa_linux_amd64 eval --data file:////repo/policy2/data.json 'data'
+
+* opa eval 'data.main.allow_review' -d rules_and_data -i inputs/input1.json -f pretty
+
+
+* opa eval 'data.packageName.ruleHead' -d <pathtoRule directory> -i <pathToInput>/input1.json -f pretty
+
+* /home/epraria/programs/opa_linux_amd64 eval 'data.policy.hello' -d /repo/test/ -i /repo/test/data.json -f pretty
+
+
+* /home/epraria/programs/opa_linux_amd64 eval 'data.policy.hello' -d /repo/policy2/ -i /repo/policy2/data.json -f pretty

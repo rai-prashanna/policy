@@ -16,13 +16,11 @@ allow if {
 	regex.match(policy.Resource, input.resource)
 	policy.Method == input.method
 	some index, role in input.roles
-	some perm in findpermissionByRole(role)
+	permissions := emc_roles[r]
+	some perm in permissions
 	perm == policy.Permission
 }
 
-findpermissionByRole(r) = permission if {
-	permission := emc_roles[r]
-}
 
 # METADATA
 # title: bulk authorize 

@@ -21,7 +21,7 @@
 # entrypoint: true
 ```
 ## optimize bundle creation  with entrypoint
-* /home/epraria/programs/opa_linux_amd64 build -b test33/ -O=1 --entrypoint omc/allow
+* /home/epraria/programs/opa_linux_amd64 build -b policies/ -O=1 --entrypoint omc/allow
 
 --entrypoint authz/redfish/v1/policy/allow
 * /home/epraria/programs/opa_linux_amd64 build -b pathOfregoFiles/ -O=1 --entrypoint packageName/rule-Head

@@ -1,0 +1,21 @@
+{
+    "input":
+    {
+        "methods": [
+            "GET",
+            "POST",
+            "GET"
+        ],
+        "resources": [
+            "/TaskService/Tasks/1/",
+            "files/upload/updateservice/package",
+            "/TaskService/Tasks/3/"
+        ],
+        "roles": [
+            "OmcEquipmentObserver",
+            "CreateJob",
+            "DeleteJob",
+            "OmcEquipmentAdministrator"
+        ]
+    }
+}

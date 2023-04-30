@@ -31,9 +31,12 @@ allow if {
 batch_allow = [url |
 	some i
 	url := input.resources[i]
+	method := input.methods[i]
 	allow with input as {
-		"method": input.method,
+		"method": method,
 		"resource": url,
 		"roles": input.roles,
 	}
 ]
+
+

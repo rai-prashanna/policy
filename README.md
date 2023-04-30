@@ -23,6 +23,7 @@
 ## optimize bundle creation  with entrypoint
 * /home/epraria/programs/opa_linux_amd64 build -b test33/ -O=1 --entrypoint omc/allow
 
+--entrypoint authz/redfish/v1/policy/allow
 * /home/epraria/programs/opa_linux_amd64 build -b pathOfregoFiles/ -O=1 --entrypoint packageName/rule-Head
 ## start OPA as REST-API-server 
 docker run --mount type=bind,source="$(pwd)"/,target=/policies -p 8181:8181 openpolicyagent/opa run /policies --server
@@ -131,3 +132,7 @@ node-exporter-full
 
 
 * /home/epraria/programs/opa_linux_amd64 eval 'data.policy.hello' -d /repo/policy2/ -i /repo/policy2/data.json -f pretty
+
+## ways to generate bundle with optimizations 
+
+* /home/epraria/programs/opa_linux_amd64 build -b . -O=1

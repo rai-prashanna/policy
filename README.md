@@ -25,12 +25,19 @@
 
 --entrypoint authz/redfish/v1/policy/allow
 * /home/epraria/programs/opa_linux_amd64 build -b pathOfregoFiles/ -O=1 --entrypoint packageName/rule-Head
+* /home/epraria/programs/opa_linux_amd64 build -b policies/policy.rego -O=1 --entrypoint authz/redfish/v1/policy/allow
+* /home/epraria/programs/opa_linux_amd64 build -b policies/finepolicy.rego -O=1 --entrypoint authz/redfish/v1/fine/policy/allow
+* /home/epraria/programs/opa_linux_amd64 build --target plan finepolicy.rego --entrypoint authz/redfish/v1/fine/policy/allow
+
+authz/redfish/v1/fine/policy/allow
 ## start OPA as REST-API-server 
 docker run --mount type=bind,source="$(pwd)"/,target=/policies -p 8181:8181 openpolicyagent/opa run /policies --server
 
 
 ### rest api endpoint
-curl -X POST --data-binary @test_input1.json http://localhost:8181/v1/data/authz/redfish/v1/policy
+curl -X POST --data-binary @test_input4.json http://localhost:8181/v1/data/authz/redfish/v1/fine/policy
+
+fine.policy
 
 curl -k -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"input":{"method":"GET","resource":"Systems","roles":["OmcSecurityAdministrator","DeleteJob","OmcEquipmentAdministrator","OmcEquipmentObserver","OmcSystemAdministrator","CreateJob","OmcSystemObserver"]}}' http://testserver:32323/v1/data/authz/redfish/v1/policy
 

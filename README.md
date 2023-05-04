@@ -35,7 +35,8 @@ docker run --mount type=bind,source="$(pwd)"/,target=/policies -p 8181:8181 open
 
 
 ### rest api endpoint
-curl -X POST --data-binary @test_input4.json http://localhost:8181/v1/data/authz/redfish/v1/fine/policy
+* curl -X POST --data-binary @test_input4.json http://localhost:8181/v1/data/authz/redfish/v1/fine/policy
+* curl -X POST --data-binary @test_input1.json http://localhost:8181/v1/data/authz/redfish/v1/policy
 
 fine.policy
 

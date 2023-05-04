@@ -1,0 +1,9 @@
+{
+    "input":{
+        "method": "GET",
+        "resource": "Chassis",
+        "roles": [
+            "CreateJob"
+        ]
+    }
+}

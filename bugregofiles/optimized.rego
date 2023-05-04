@@ -1,5 +1,7 @@
 package authz.redfish.v1.policy
 
+default allow = false
+
 allow {
 	__local7__1 = input.resource
 	regex.match("AggregationService", __local7__1)

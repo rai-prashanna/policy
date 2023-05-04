@@ -48,10 +48,9 @@ curl -k -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d
     "method": "POST",
     "resource": "files/upload/updateservice/package",
     "roles": [
-        "OmcEquipmentObserver",
-        "CreateJob",
-        "DeleteJob",
-        "OmcEquipmentAdministrator"
+        "role1",
+        "role2",
+        "role3"
     ]
 }
 }
@@ -72,10 +71,9 @@ curl -X POST --data-binary @test_input2.json http://localhost:8181/v1/data/authz
         "/TaskService/Tasks/3/"
     ],
     "roles": [
-        "OmcEquipmentObserver",
-        "CreateJob",
-        "DeleteJob",
-        "OmcEquipmentAdministrator"
+        "role1",
+        "role2",
+        "role3"
     ]
 }
 }
@@ -87,13 +85,8 @@ curl -X POST --data-binary @test_input2.json http://localhost:8181/v1/data/authz
 curl -X POST --data-binary @policy_1_input_1.json http://localhost:8181/v1/data/authz/orders/policy2 
 
 
-* https://play.openpolicyagent.org/p/QpaWPAKNlo
 
-My useful links 
-* https://play.openpolicyagent.org/p/ZBnurgkbUy
-
-* https://play.openpolicyagent.org/p/zoKO1NWSrS
-
+## PromQL
 
 rate(permissionHandler_authorization_requests_requests_latency_seconds_sum[60m])/rate(permissionHandler_authorization_requests_requests_latency_seconds_count[60m])
 
@@ -143,3 +136,7 @@ node-exporter-full
 ## ways to generate bundle with optimizations 
 
 * /home/epraria/programs/opa_linux_amd64 build -b . -O=1
+/home/epraria/programs/opa_linux_amd64 build -t wasm --entrypoint authz/redfish/v1/policy/allow
+
+
+* source /home/epraria/.wasmer/wasmer.sh

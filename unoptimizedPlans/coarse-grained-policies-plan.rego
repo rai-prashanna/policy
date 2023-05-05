@@ -1,10 +1,9 @@
-package authz.redfish.v1.policy
-
 import data.Roles as emc_roles
 import data.Statements as emc_policies
+
 import future.keywords
 
-default allow =false 
+default allow := false
 
 allow if {
 	policy = emc_policies[_]

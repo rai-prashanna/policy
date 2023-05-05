@@ -25,11 +25,18 @@
 
 --entrypoint authz/redfish/v1/policy/allow
 * /home/epraria/programs/opa_linux_amd64 build -b pathOfregoFiles/ -O=1 --entrypoint packageName/rule-Head
-* /home/epraria/programs/opa_linux_amd64 build -b policies/policy.rego -O=1 --entrypoint authz/redfish/v1/policy/allow
+* /home/epraria/programs/opa_linux_amd64 build -b policy.rego -O=1 --entrypoint authz/redfish/v1/policy/allow
 * /home/epraria/programs/opa_linux_amd64 build -b policies/finepolicy.rego -O=1 --entrypoint authz/redfish/v1/fine/policy/allow
 * /home/epraria/programs/opa_linux_amd64 build --target plan finepolicy.rego --entrypoint authz/redfish/v1/fine/policy/allow
 
-authz/redfish/v1/fine/policy/allow
+* /home/epraria/programs/opa_linux_amd64 build --target plan policies/coarse-grained-policies.rego --entrypoint authz/redfish/v1/policy/allow
+
+* /home/epraria/programs/opa_linux_amd64 build pathOfregoFiles/ -O=1 policies/coarse-grained-policies.rego --entrypoint authz/redfish/v1/policy/allow
+
+* /home/epraria/programs/opa_linux_amd64 build -b policies/ -O=0 --entrypoint authz/redfish/v1/policy/allow
+
+* /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan policies/ policy.rego --entrypoint authz/redfish/v1/fine/policy/allow
+* /home/epraria/programs/opa_linux_amd64-0.52.0 build -b policies/ -O=1 --entrypoint authz/redfish/v1/fine/policy/allow
 ## start OPA as REST-API-server 
 docker run --mount type=bind,source="$(pwd)"/,target=/policies -p 8181:8181 openpolicyagent/opa run /policies --server
 
@@ -136,8 +143,13 @@ node-exporter-full
 
 ## ways to generate bundle with optimizations 
 
-* /home/epraria/programs/opa_linux_amd64 build -b . -O=1
-/home/epraria/programs/opa_linux_amd64 build -t wasm --entrypoint authz/redfish/v1/policy/allow
+* /home/epraria/programs/opa_linux_amd64-0.52.0 build -b tmp/ -O=1
+* /home/epraria/programs/opa_linux_amd64 build -t wasm --entrypoint authz/redfish/v1/policy/allow
 
 
 * source /home/epraria/.wasmer/wasmer.sh
+
+* /app/vbuild/UBUNTU20-x86_64/python/3.10.5/bin/python3 -m pip install -U -r requirements.txt
+
+
+* /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan tmp/coarse-grained-policies.rego --entrypoint authz/redfish/v1/policy/allow

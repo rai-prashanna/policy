@@ -36,6 +36,7 @@
 * /home/epraria/programs/opa_linux_amd64 build -b policies/ -O=0 --entrypoint authz/redfish/v1/policy/allow
 
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan policies/ policy.rego --entrypoint authz/redfish/v1/fine/policy/allow
+* 
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build -b policies/ -O=1 --entrypoint authz/redfish/v1/fine/policy/allow
 ## start OPA as REST-API-server 
 docker run --mount type=bind,source="$(pwd)"/,target=/policies -p 8181:8181 openpolicyagent/opa run /policies --server
@@ -118,6 +119,7 @@ node-exporter-full
 * git clone https://github.com/borgeby/jarl
 * cd jarl/core/
 * lein run /repo/policy2/bundle.tar.gz --input /repo/policy2/data.json 
+* lein run /repo/policy/optimizedPlans/bundle.tar.gz --input /repo/policy2/data.json
   
 * /home/epraria/programs/opa_linux_amd64 build --target plan policy.rego
 * mvn install:install-file -Dfile=repo/jarl/core/target/jarl-0.1.0-SNAPSHOT-standalone.jar -DgroupId=com.prai -DartifactId=jarl -Dversion=0.1.0-SNAPSHOT -Dpackaging=jar -DgeneratePom=true
@@ -144,6 +146,9 @@ node-exporter-full
 ## ways to generate bundle with optimizations 
 
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build -b tmp/ -O=1
+* /home/epraria/programs/opa_linux_amd64-0.52.0 build -b tmp/fine-grained-policies.rego -O=1 --entrypoint authz/redfish/v1/fine/policy/batch_allow
+
+authz.redfish.v1.fine.policy
 * /home/epraria/programs/opa_linux_amd64 build -t wasm --entrypoint authz/redfish/v1/policy/allow
 
 
@@ -152,4 +157,60 @@ node-exporter-full
 * /app/vbuild/UBUNTU20-x86_64/python/3.10.5/bin/python3 -m pip install -U -r requirements.txt
 
 
-* /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan tmp/coarse-grained-policies.rego --entrypoint authz/redfish/v1/policy/allow
+* /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan tmp/fine-grained-policies.rego 
+*     private static String IRFile2= "/repo/test-rego-policy/policy/new-optimized/optimized/authz/redfish/v1/fine/plan.json";
+
+    private static String entrypoint2="authz/redfish/v1/fine/policy/batch_allow";
+
+        String method = "POST";
+
+        List<String> uris=Arrays.asList("/Managers/my-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+                "/TaskService/Tasks/1/",
+                "/Managers/prai-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+                "/Managers/vanja-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
+                "files/upload/updateservice/package",
+                "/TaskService/Tasks/3/");
+
+        List<String> roles=Arrays.asList("OmcEquipmentObserver",
+                "CreateJob",
+                "DeleteJob",
+                "OmcEquipmentAdministrator");
+
+                    public static List<String> isAllowedJarl(List < String > uris, String method, List < String > roles) {
+        var file = new File(IRFile2);
+        boolean allowed = false;
+   //     authz/redfish/v1/fine/policy/allow
+        Map<String, ?> data = Map.of();
+        Map<String,Object> map = new HashMap<>();
+
+        map.put("roles", Arrays.asList("OmcEquipmentObserver",
+                "CreateJob",
+                "DeleteJob",
+                "OmcEquipmentAdministrator"));
+        map.put("method","GET");
+
+        map.put("resources",Arrays.asList("/TaskService/Tasks/1/",
+                "files/upload/updateservice/package",
+                "/TaskService/Tasks/3/"));
+
+        try {
+            System.out.println( "Allowed" );
+            //authz/redfish/v1/fine/policy/allow
+            var test1 = Jarl.builder(file)
+                    .build()
+                    .getPlan(entrypoint2)
+                    .eval(map, data).getResults();
+            System.out.println( "test" );
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        if (allowed) {
+            System.out.println( "Allowed" );
+        }
+        return Collections.EMPTY_LIST;
+    }
+
+    }
+
+/home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan /repo/policy/tmp/optimizedregos --entrypoint authz/redfish/v1/fine/policy/allow

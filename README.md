@@ -89,12 +89,6 @@ curl -X POST --data-binary @test_input2.json http://localhost:8181/v1/data/authz
 **********************************
 
 
-
-****************
-curl -X POST --data-binary @policy_1_input_1.json http://localhost:8181/v1/data/authz/orders/policy2 
-
-
-
 ## PromQL
 
 rate(permissionHandler_authorization_requests_requests_latency_seconds_sum[60m])/rate(permissionHandler_authorization_requests_requests_latency_seconds_count[60m])
@@ -158,59 +152,5 @@ authz.redfish.v1.fine.policy
 
 
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan tmp/fine-grained-policies.rego 
-*     private static String IRFile2= "/repo/test-rego-policy/policy/new-optimized/optimized/authz/redfish/v1/fine/plan.json";
 
-    private static String entrypoint2="authz/redfish/v1/fine/policy/batch_allow";
-
-        String method = "POST";
-
-        List<String> uris=Arrays.asList("/Managers/my-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
-                "/TaskService/Tasks/1/",
-                "/Managers/prai-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
-                "/Managers/vanja-pod/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup",
-                "files/upload/updateservice/package",
-                "/TaskService/Tasks/3/");
-
-        List<String> roles=Arrays.asList("OmcEquipmentObserver",
-                "CreateJob",
-                "DeleteJob",
-                "OmcEquipmentAdministrator");
-
-                    public static List<String> isAllowedJarl(List < String > uris, String method, List < String > roles) {
-        var file = new File(IRFile2);
-        boolean allowed = false;
-   //     authz/redfish/v1/fine/policy/allow
-        Map<String, ?> data = Map.of();
-        Map<String,Object> map = new HashMap<>();
-
-        map.put("roles", Arrays.asList("OmcEquipmentObserver",
-                "CreateJob",
-                "DeleteJob",
-                "OmcEquipmentAdministrator"));
-        map.put("method","GET");
-
-        map.put("resources",Arrays.asList("/TaskService/Tasks/1/",
-                "files/upload/updateservice/package",
-                "/TaskService/Tasks/3/"));
-
-        try {
-            System.out.println( "Allowed" );
-            //authz/redfish/v1/fine/policy/allow
-            var test1 = Jarl.builder(file)
-                    .build()
-                    .getPlan(entrypoint2)
-                    .eval(map, data).getResults();
-            System.out.println( "test" );
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        if (allowed) {
-            System.out.println( "Allowed" );
-        }
-        return Collections.EMPTY_LIST;
-    }
-
-    }
-
-/home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan /repo/policy/tmp/optimizedregos --entrypoint authz/redfish/v1/fine/policy/allow
+* /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan /repo/policy/tmp/optimizedregos --entrypoint authz/redfish/v1/fine/policy/allow

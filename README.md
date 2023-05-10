@@ -41,6 +41,7 @@
 ## start OPA as REST-API-server 
 docker run --mount type=bind,source="$(pwd)"/,target=/policies -p 8181:8181 openpolicyagent/opa run /policies --server
 
+* docker run --mount type=bind,source="$(pwd)"/optimizedRego,target=/opt/policies/optimizedRego -p 8181:8181 testserver:5000/opa:0.0.8
 
 ### rest api endpoint
 * curl -X POST --data-binary @test_input4.json http://localhost:8181/v1/data/authz/redfish/v1/fine/policy
@@ -154,3 +155,5 @@ authz.redfish.v1.fine.policy
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan tmp/fine-grained-policies.rego 
 
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan /repo/policy/tmp/optimizedregos --entrypoint authz/redfish/v1/fine/policy/allow
+
+* /proj/athena/tools/intellij/run.sh

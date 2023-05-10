@@ -112,7 +112,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_sys_bytes",
+          "expr": "go_memstats_sys_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -158,7 +158,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -208,10 +208,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_mspan_inuse_bytes",
+          "expr": "go_memstats_mspan_inuse_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -221,7 +222,8 @@
         },
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "go_memstats_mspan_sys_bytes{namespace=\"$namespace\", instance=~\"$instance\"}",
           "format": "time_series",
@@ -232,7 +234,8 @@
         },
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "go_memstats_mcache_inuse_bytes{namespace=\"$namespace\", instance=~\"$instance\"}",
           "format": "time_series",
@@ -243,7 +246,8 @@
         },
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "go_memstats_mcache_sys_bytes{namespace=\"$namespace\", instance=~\"$instance\"}",
           "format": "time_series",
@@ -254,7 +258,8 @@
         },
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "go_memstats_buck_hash_sys_bytes{namespace=\"$namespace\", instance=~\"$instance\"}",
           "format": "time_series",
@@ -265,7 +270,8 @@
         },
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "go_memstats_gc_sys_bytes{namespace=\"$namespace\", instance=~\"$instance\"}",
           "format": "time_series",
@@ -276,7 +282,8 @@
         },
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "go_memstats_other_sys_bytes{namespace=\"$namespace\", instance=~\"$instance\"} - go_memstats_other_sys_bytes{namespace=\"$namespace\", instance=~\"$instance\"}",
           "format": "time_series",
@@ -287,7 +294,8 @@
         },
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "go_memstats_next_gc_bytes{namespace=\"$namespace\", instance=~\"$instance\"}",
           "format": "time_series",
@@ -334,7 +342,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -382,10 +390,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_mallocs_total - go_memstats_frees_total",
+          "expr": "go_memstats_mallocs_total - go_memstats_frees_total{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -457,7 +466,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -503,10 +512,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_stack_inuse_bytes",
+          "expr": "go_memstats_stack_inuse_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -516,7 +526,8 @@
         },
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "expr": "go_memstats_stack_sys_bytes{namespace=\"$namespace\", instance=~\"$instance\"}",
           "format": "time_series",
@@ -565,7 +576,6 @@
         "type": "prometheus",
         "uid": "$cluster"
       },
-      "description": "go_memstats_lookups_total – counts how many pointer dereferences happened. This is a counter value so you can use rate() to lookups/s.",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -575,13 +585,13 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 6,
+        "h": 8,
         "w": 12,
         "x": 12,
         "y": 16
       },
       "hiddenSeries": false,
-      "id": 18,
+      "id": 14,
       "legend": {
         "avg": false,
         "current": false,
@@ -600,8 +610,8 @@
       },
       "percentage": false,
       "pluginVersion": "9.5.1",
-      "pointradius": 2,
-      "points": false,
+      "pointradius": 1,
+      "points": true,
       "renderer": "flot",
       "seriesOverrides": [],
       "spaceLength": 10,
@@ -613,7 +623,7 @@
             "uid": "$cluster"
           },
           "editorMode": "code",
-          "expr": "rate(go_memstats_lookups_total[$interval])",
+          "expr": "rate(go_memstats_alloc_bytes_total{instance=\"testserver:32323\"}[$interval])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -624,7 +634,7 @@
       ],
       "thresholds": [],
       "timeRegions": [],
-      "title": "Rate of a Pointer Dereferences per $interval",
+      "title": "Rates of Allocation per $interval",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -638,14 +648,14 @@
       },
       "yaxes": [
         {
-          "format": "ops",
+          "format": "Bps",
           "logBase": 1,
           "show": true
         },
         {
           "format": "short",
           "logBase": 1,
-          "show": true
+          "show": false
         }
       ],
       "yaxis": {
@@ -709,7 +719,7 @@
             "uid": "$cluster"
           },
           "editorMode": "code",
-          "expr": "rate(go_memstats_mallocs_total[$interval])",
+          "expr": "rate(go_memstats_mallocs_total{instance=\"testserver:32323\"}[$interval])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -755,8 +765,9 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
+      "description": "go_memstats_lookups_total – counts how many pointer dereferences happened. This is a counter value so you can use rate() to lookups/s.",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -766,13 +777,13 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 8,
+        "h": 6,
         "w": 12,
         "x": 12,
-        "y": 22
+        "y": 24
       },
       "hiddenSeries": false,
-      "id": 14,
+      "id": 18,
       "legend": {
         "avg": false,
         "current": false,
@@ -791,8 +802,8 @@
       },
       "percentage": false,
       "pluginVersion": "9.5.1",
-      "pointradius": 1,
-      "points": true,
+      "pointradius": 2,
+      "points": false,
       "renderer": "flot",
       "seriesOverrides": [],
       "spaceLength": 10,
@@ -801,10 +812,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "rate(go_memstats_alloc_bytes_total[$interval])",
+          "expr": "rate(go_memstats_lookups_total{instance=\"testserver:32323\"}[$interval])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -815,7 +827,7 @@
       ],
       "thresholds": [],
       "timeRegions": [],
-      "title": "Rates of Allocation per $interval",
+      "title": "Rate of a Pointer Dereferences per $interval",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -829,14 +841,14 @@
       },
       "yaxes": [
         {
-          "format": "Bps",
+          "format": "ops",
           "logBase": 1,
           "show": true
         },
         {
           "format": "short",
           "logBase": 1,
-          "show": false
+          "show": true
         }
       ],
       "yaxis": {
@@ -925,7 +937,7 @@
             "uid": "$cluster"
           },
           "editorMode": "code",
-          "expr": "go_memstats_heap_sys_bytes",
+          "expr": "go_memstats_heap_sys_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1020,7 +1032,7 @@
             "uid": "$cluster"
           },
           "editorMode": "code",
-          "expr": "go_memstats_heap_alloc_bytes",
+          "expr": "go_memstats_heap_alloc_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1115,7 +1127,7 @@
             "uid": "$cluster"
           },
           "editorMode": "code",
-          "expr": "go_memstats_heap_idle_bytes",
+          "expr": "go_memstats_heap_idle_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1161,7 +1173,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1207,10 +1219,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_heap_inuse_bytes",
+          "expr": "go_memstats_heap_inuse_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1256,7 +1269,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1302,10 +1315,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_heap_released_bytes",
+          "expr": "go_memstats_heap_released_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1351,7 +1365,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "",
       "fieldConfig": {
@@ -1398,10 +1412,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_heap_objects",
+          "expr": "go_memstats_heap_objects{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1473,7 +1488,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1523,10 +1538,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_mspan_inuse_bytes",
+          "expr": "go_memstats_mspan_inuse_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1572,7 +1588,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "",
       "fieldConfig": {
@@ -1623,10 +1639,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_mspan_sys_bytes",
+          "expr": "go_memstats_mspan_sys_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1672,7 +1689,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1722,10 +1739,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_mcache_sys_bytes",
+          "expr": "go_memstats_mcache_sys_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1771,7 +1789,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1821,10 +1839,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_mcache_inuse_bytes",
+          "expr": "go_memstats_mcache_inuse_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1870,7 +1889,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1920,10 +1939,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_gc_sys_bytes",
+          "expr": "go_memstats_gc_sys_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1969,7 +1989,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -2019,10 +2039,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_buck_hash_sys_bytes",
+          "expr": "go_memstats_buck_hash_sys_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -2068,7 +2089,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -2118,10 +2139,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_memstats_next_gc_bytes",
+          "expr": "go_memstats_next_gc_bytes{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -2167,7 +2189,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "",
       "fieldConfig": {
@@ -2218,7 +2240,8 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "go_memstats_other_sys_bytes - go_memstats_other_sys_bytes",
@@ -2267,7 +2290,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -2313,10 +2336,11 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "go_goroutines",
+          "expr": "go_goroutines{instance=\"testserver:32323\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -2362,7 +2386,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "$cluster"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -2409,7 +2433,8 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$cluster"
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "go_gc_duration_seconds{instance=\"testserver:32323\"}",
@@ -2683,7 +2708,7 @@
       }
     }
   ],
-  "refresh": "10s",
+  "refresh": false,
   "schemaVersion": 38,
   "style": "dark",
   "tags": [
@@ -2847,8 +2872,8 @@
     ]
   },
   "time": {
-    "from": "now-15m",
-    "to": "now"
+    "from": "2023-05-10T16:15:34.592Z",
+    "to": "2023-05-10T18:15:34.592Z"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -2878,6 +2903,6 @@
   "timezone": "",
   "title": "Open Policy Agent Metrics",
   "uid": "CgCw8jKZz",
-  "version": 11,
+  "version": 12,
   "weekStart": ""
 }

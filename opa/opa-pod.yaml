@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: opa
+  labels:
+    app: opa
+    owner: prai
+    run: prai
+spec:
+  containers:
+    - name: opa
+      image: testserver:5000/opa:0.0.8
+      ports:
+        - name: opa-http
+          containerPort: 8181
+        - name: nodeexport-http
+          containerPort: 9100
+      volumeMounts:
+        - name: opa-data
+          mountPath: /opt/policies
+  initContainers:
+    - name: install
+      image: bitnami/git
+      command:
+        - git
+        - "clone"
+        - "https://github.com/rai-prashanna/policy"
+        - "/work-dir"
+      volumeMounts:
+        - name: opa-data
+          mountPath: "/work-dir"
+  dnsPolicy: Default
+  volumes:
+    - name: opa-data
+      emptyDir: {}
+

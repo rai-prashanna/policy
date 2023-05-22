@@ -1,0 +1,54 @@
+{
+    "Roles": {
+        "CreateJob": [
+            "createA",
+            "patchA",
+            "readA",
+            "readKey",
+            "readService"
+        ],
+        "DeleteJob": [
+            "deleteA",
+            "readA",
+            "readKey",
+            "readService"
+        ]
+    },
+    "Statements": [
+        {
+            "Method": "POST",
+            "Permission": "uploadA",
+            "Resource": "files/upload/updateservice/package"
+        },
+        {
+            "Method": "GET",
+            "Permission": "readA",
+            "Resource": "A"
+        },
+        {
+            "Method": "GET",
+            "Permission": "readA",
+            "Resource": "A/ASources"
+        },
+        {
+            "Method": "POST",
+            "Permission": "createA",
+            "Resource": "A/ASources"
+        },
+        {
+            "Method": "GET",
+            "Permission": "readA",
+            "Resource": "A/ASources/[^/]"
+        },
+        {
+            "Method": "DELETE",
+            "Permission": "deleteA",
+            "Resource": "A/ASources/[^/]"
+        },
+        {
+            "Method": "PATCH",
+            "Permission": "patchA",
+            "Resource": "A/ASources/[^/]"
+        }
+    ]
+}

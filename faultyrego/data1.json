@@ -1,0 +1,829 @@
+{
+  "Roles": {
+    "CreateRole": [
+      "createDataSource",
+      "patchDataSource",
+      "readDataSourceService",
+      "readMyKey",
+      "readMyService"
+    ],
+    "DeleteRole": [
+      "deleteDataSource",
+      "readDataSourceService",
+      "readMyKey",
+      "readMyService"
+    ],
+    "PraiDeviceAdministrator": [
+      "ComputerSystem.BootSourceOverride",
+      "ComputerSystem.Reset",
+      "createDataSource",
+      "createVPOD",
+      "deleteDataSource",
+      "downloadLogs",
+      "patchDataSource",
+      "readDataSourceService",
+      "readSalary",
+      "readExternalSalary",
+      "readBridges",
+      "readCertificate",
+      "readChassis",
+      "readLogService",
+      "readManagers",
+      "readNetworkProtocol",
+      "readNetworks",
+      "readMyKey",
+      "readRacks",
+      "readRedfishAssets",
+      "readRemoteBackupService",
+      "readRemoteUpdateService",
+      "readPmJobConfiguration",
+      "readRelays",
+      "readMyPods",
+      "readSwitches",
+      "readSystems",
+      "readMyService",
+      "readTopologyLink",
+      "readUpdateService",
+      "readVPODs",
+      "RemoteBackupService.CreateAndTransferBackup",
+      "RemoteUpdateService.AbortAssetUpgradeJob",
+      "RemoteUpdateService.CreateAssetUpgradeJob",
+      "RemoteUpdateService.RemoveAssetUpgradeJob",
+      "RemoteUpdateService.RemoveSoftwarePackage",
+      "RemoteUpdateService.RemoveSoftwareVersion",
+      "RemoteUpdateService.StartAssetUpgradeJob",
+      "RemoteUpdateService.UpdateManager",
+      "RemoteUpdateService.UpdateManagerCancel",
+      "RemoteUpdateService.UploadSoftwarePackage",
+      "removeNetwork",
+      "removePackage",
+      "removeVPOD",
+      "retrieveLogs",
+      "SDIPod.ModifyPmJob",
+      "sdipod.readSalary",
+      "setLogServer",
+      "updateComputerSystem",
+      "updateNetwork",
+      "updateSnmpCredentials",
+      "updateVPOD",
+      "uploadPackage",
+      "VPOD.Allocate",
+      "VPOD.CreateL2Network",
+      "VPOD.CreateL2NetworkWithAutomaticConnectivityForAllPorts",
+      "VPOD.CreateL2NetworkWithAutomaticConnectivityForSelectedPorts",
+      "VPOD.ConnectManualSelectedPorts",
+      "VPOD.Deallocate",
+      "VPOD.DisconnectManualSelectedPorts"
+    ],
+    "PraiDeviceObserver": [
+      "readDataSourceService",
+      "readSalary",
+      "readExternalSalary",
+      "readBridges",
+      "readCertificate",
+      "readChassis",
+      "readLogService",
+      "readManagers",
+      "readNetworkProtocol",
+      "readNetworks",
+      "readPmJobConfiguration",
+      "readMyKey",
+      "readRacks",
+      "readRedfishAssets",
+      "readRelays",
+      "readRemoteBackupService",
+      "readRemoteUpdateService",
+      "readMyPods",
+      "readSwitches",
+      "readSystems",
+      "readTopologyLink",
+      "readUpdateService",
+      "readVPODs",
+      "sdipod.readSalary"
+    ],
+    "PraiSecurityAdministrator": [
+      "createCertificate",
+      "createPublicKey",
+      "deletePublicKey",
+      "readDataSourceService",
+      "readSalary",
+      "readExternalSalary",
+      "readInternalSalary",
+      "readCertificate",
+      "readManagers",
+      "readMyKey",
+      "readRedfishAssets",
+      "readMyService",
+      "RedfishAsset.RemoveCredential",
+      "RedfishAsset.SetCredential",
+      "removeCertificate",
+      "sdipod.readSalary"
+    ],
+    "PraiSSystemAdministrator": [
+      "readDataSourceService",
+      "readSalary",
+      "readInternalSalary",
+      "readCertificate",
+      "readManagers",
+      "readMyKey",
+      "readRemoteBackupService",
+      "readMyService",
+      "removeTask",
+      "RemoteBackupService.CreateAndTransferBackup"
+    ],
+    "PraiSSystemObserver": [
+      "readDataSourceService",
+      "readSalary",
+      "readInternalSalary",
+      "readCertificate",
+      "readManagers",
+      "readMyKey",
+      "readRemoteBackupService"
+    ]
+  },
+  "Statements": [
+    {
+      "Method": "POST",
+      "Permission": "uploadPackage",
+      "Resource": "files/upload/updateservice/package"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readDataSourceService",
+      "Resource": "DataSourceService"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readDataSourceService",
+      "Resource": "DataSourceService/DataSources"
+    },
+    {
+      "Method": "POST",
+      "Permission": "createDataSource",
+      "Resource": "DataSourceService/DataSources"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readDataSourceService",
+      "Resource": "DataSourceService/DataSources/[^/]"
+    },
+    {
+      "Method": "DELETE",
+      "Permission": "deleteDataSource",
+      "Resource": "DataSourceService/DataSources/[^/]"
+    },
+    {
+      "Method": "PATCH",
+      "Permission": "patchDataSource",
+      "Resource": "DataSourceService/DataSources/[^/]"
+    },
+    {
+      "Method": "POST",
+      "Permission": "updateSnmpCredentials",
+      "Resource": "DataSourceService/DataSources/[^/]+/Actions/Oem/prai2DataSource.RegenerateSNMPCredentials"
+    },
+    {
+      "Method": "POST",
+      "Permission": "setLogServer",
+      "Resource": "DataSourceService/DataSources/[^/]+/Actions/Oem/prai2DataSource.SetLogServer"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readMyKey",
+      "Resource": "DataSourceService/DataSources/[^/]+/prai/uppsala_2/TrustedPublicKeys"
+    },
+    {
+      "Method": "POST",
+      "Permission": "createPublicKey",
+      "Resource": "DataSourceService/DataSources/[^/]+/prai/uppsala_2/TrustedPublicKeys"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readMyKey",
+      "Resource": "DataSourceService/DataSources/[^/]+/prai/uppsala_2/TrustedPublicKeys/[^/]+"
+    },
+    {
+      "Method": "DELETE",
+      "Permission": "deletePublicKey",
+      "Resource": "DataSourceService/DataSources/[^/]+/prai/uppsala_2/TrustedPublicKeys/[^/]+"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSalary",
+      "Resource": "prai/uppsala_2/SalaryService"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSalary",
+      "Resource": "prai/uppsala_2/SalaryService/Salarys"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readExternalSalary",
+      "Resource": "prai/uppsala_2/SalaryService/ExternalSalarys"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readInternalSalary",
+      "Resource": "prai/uppsala_2/SalaryService/InternalSalarys"
+    },
+    {
+      "Method": "GET",
+      "Permission": "sdipod.readSalary",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/Salarys"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSalary",
+      "Resource": "prai/uppsala_2/SalaryService/Salarys/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/Bridges"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/Bridges"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/Bridges/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/Bridges/[^/]+/BridgePorts"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/Bridges/[^/]+/BridgePorts/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/Bridges/[^/]+/VLANs"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/Bridges/[^/]+/VLANs/[^/]"
+    },
+    { "Method": "GET", "Permission": "readChassis", "Resource": "Chassis" },
+    {
+      "Method": "GET",
+      "Permission": "readChassis",
+      "Resource": "Chassis/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readChassis",
+      "Resource": "Chassis/[^/]+/Power"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readChassis",
+      "Resource": "Chassis/[^/]+/Thermal"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/DataBridges"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/DataBridges"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/DataBridges/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/DataBridges/[^/]+/BridgePorts"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/DataBridges/[^/]+/BridgePorts/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/DataBridges/[^/]+/VLANs"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readBridges",
+      "Resource": "prai/uppsala_2/DataBridges/[^/]+/VLANs/[^/]"
+    },
+    { "Method": "GET", "Permission": "readManagers", "Resource": "Managers" },
+    {
+      "Method": "GET",
+      "Permission": "readManagers",
+      "Resource": "Managers/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readLogService",
+      "Resource": "Managers/[^/]+/LogServices"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readLogService",
+      "Resource": "Managers/[^/]+/LogServices/[^/]"
+    },
+    {
+      "Method": "POST",
+      "Permission": "retrieveLogs",
+      "Resource": "Managers/[^/]+/LogServices/[^/]+/Actions/Oem/prai2LogService.RetrieveLog"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readNetworkProtocol",
+      "Resource": "Managers/[^/]+/NetworkProtocol"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRemoteBackupService",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteBackupService"
+    },
+    {
+      "Method": "POST",
+      "Permission": "RemoteBackupService.CreateAndTransferBackup",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteBackupService/Actions/prai2RemoteBackupService.CreateAndTransferBackup"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRemoteUpdateService",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRemoteUpdateService",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/Packages"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRemoteUpdateService",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/Packages/[^/]"
+    },
+    {
+      "Method": "DELETE",
+      "Permission": "RemoteUpdateService.RemoveSoftwarePackage",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/Packages/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRemoteUpdateService",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/SoftwareVersions"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRemoteUpdateService",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/SoftwareVersions/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRemoteUpdateService",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/AssetUpgradeJobs"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRemoteUpdateService",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/AssetUpgradeJobs/[^/]"
+    },
+    {
+      "Method": "DELETE",
+      "Permission": "RemoteUpdateService.RemoveAssetUpgradeJob",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/AssetUpgradeJobs/[^/]"
+    },
+    {
+      "Method": "POST",
+      "Permission": "RemoteUpdateService.UploadSoftwarePackage",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/Actions/prai2RemoteUpdateService.UploadSoftwarePackage"
+    },
+    {
+      "Method": "POST",
+      "Permission": "RemoteUpdateService.RemoveSoftwareVersion",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/Actions/prai2RemoteUpdateService.RemoveSoftwareVersion"
+    },
+    {
+      "Method": "POST",
+      "Permission": "RemoteUpdateService.UpdateManager",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/Actions/prai2RemoteUpdateService.UpdateManager"
+    },
+    {
+      "Method": "POST",
+      "Permission": "RemoteUpdateService.UpdateManagerCancel",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/Actions/prai2RemoteUpdateService.UpdateManagerCancel"
+    },
+    {
+      "Method": "POST",
+      "Permission": "RemoteUpdateService.CreateAssetUpgradeJob",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/Actions/prai2RemoteUpdateService.CreateAssetUpgradeJob"
+    },
+    {
+      "Method": "POST",
+      "Permission": "RemoteUpdateService.StartAssetUpgradeJob",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/AssetUpgradeJobs/[^/]+/Actions/prai2AssetUpgradeJob.Start"
+    },
+    {
+      "Method": "POST",
+      "Permission": "RemoteUpdateService.AbortAssetUpgradeJob",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/RemoteUpdateService/AssetUpgradeJobs/[^/]+/Actions/prai2AssetUpgradeJob.Abort"
+    },
+    {
+      "Method": "POST",
+      "Permission": "createCertificate",
+      "Resource": "Managers/[^/]+/Certificates"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readCertificate",
+      "Resource": "Managers/[^/]+/Certificates"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readCertificate",
+      "Resource": "Managers/[^/]+/Certificates/[^/]"
+    },
+    {
+      "Method": "DELETE",
+      "Permission": "removeCertificate",
+      "Resource": "Managers/[^/]+/Certificates/[^/]"
+    },
+    {
+      "Method": "POST",
+      "Permission": "createCertificate",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/TrustedCertificates"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readCertificate",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/TrustedCertificates"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readCertificate",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/TrustedCertificates/[^/]"
+    },
+    {
+      "Method": "DELETE",
+      "Permission": "removeCertificate",
+      "Resource": "Managers/[^/]+/prai/uppsala_2/TrustedCertificates/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readNetworks",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Networks"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readNetworks",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Networks/[^/]"
+    },
+    {
+      "Method": "DELETE",
+      "Permission": "removeNetwork",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Networks/[^/]"
+    },
+    {
+      "Method": "PATCH",
+      "Permission": "updateNetwork",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Networks/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readPmJobConfiguration",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/PmJobConfiguration"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRacks",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/Racks"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRacks",
+      "Resource": "prai/uppsala_2/Racks"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRacks",
+      "Resource": "prai/uppsala_2/Racks/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRedfishAssets",
+      "Resource": "prai/uppsala_2/RedfishAssets"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRedfishAssets",
+      "Resource": "prai/uppsala_2/RedfishAssets/[^/]"
+    },
+    {
+      "Method": "POST",
+      "Permission": "RedfishAsset.RemoveCredential",
+      "Resource": "prai/uppsala_2/RedfishAssets/[^/]+/Actions/prai2RedfishAsset.RemoveCredential"
+    },
+    {
+      "Method": "POST",
+      "Permission": "RedfishAsset.SetCredential",
+      "Resource": "prai/uppsala_2/RedfishAssets/[^/]+/Actions/prai2RedfishAsset.SetCredential"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRelays",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/Relays"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRelays",
+      "Resource": "prai/uppsala_2/Relays"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRelays",
+      "Resource": "prai/uppsala_2/Relays/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readMyPods",
+      "Resource": "prai/uppsala_2/MyPods"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readMyPods",
+      "Resource": "prai/uppsala_2/MyPods/[^/]"
+    },
+    {
+      "Method": "POST",
+      "Permission": "SDIPod.ModifyPmJob",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/Actions/prai2SDIPod.ModifyPmJob"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readRedfishAssets",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/RedfishAssets"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/Systems"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readTopologyLink",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/TopologyLinks"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readVPODs",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/VPODs"
+    },
+    {
+      "Method": "POST",
+      "Permission": "createVPOD",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/VPODs"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSwitches",
+      "Resource": "prai/uppsala_2/MyPods/[^/]+/Switches"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSwitches",
+      "Resource": "prai/uppsala_2/Switches"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSwitches",
+      "Resource": "prai/uppsala_2/Switches/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSwitches",
+      "Resource": "prai/uppsala_2/Switches/[^/]+/ExternalLinks"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSwitches",
+      "Resource": "prai/uppsala_2/Switches/[^/]+/ExternalLinks/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSwitches",
+      "Resource": "prai/uppsala_2/Switches/[^/]+/Pims"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSwitches",
+      "Resource": "prai/uppsala_2/Switches/[^/]+/Pims/[^/]"
+    },
+    { "Method": "GET", "Permission": "readSystems", "Resource": "Systems" },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]"
+    },
+    {
+      "Method": "PATCH",
+      "Permission": "updateComputerSystem",
+      "Resource": "Systems/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/prai/uppsala_2/FwComponents"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/prai/uppsala_2/FwComponents/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/Processors"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/Processors/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/SimpleStorage"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/SimpleStorage/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/Memory"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/Memory/[^/]"
+    },
+    {
+      "Method": "POST",
+      "Permission": "ComputerSystem.Reset",
+      "Resource": "Systems/[^/]+/Actions/ComputerSystem.Reset"
+    },
+    {
+      "Method": "POST",
+      "Permission": "ComputerSystem.BootSourceOverride",
+      "Resource": "Systems/[^/]+/Actions/Oem/prai2ComputerSystem.BootSourceOverride"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/EthernetInterfaces"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/EthernetInterfaces/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readSystems",
+      "Resource": "Systems/[^/]+/ResetActionInfo"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readUpdateService",
+      "Resource": "UpdateService"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readUpdateService",
+      "Resource": "UpdateService/prai/uppsala_2/Packages"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readUpdateService",
+      "Resource": "UpdateService/prai/uppsala_2/Packages/[^/]"
+    },
+    {
+      "Method": "DELETE",
+      "Permission": "removePackage",
+      "Resource": "UpdateService/prai/uppsala_2/Packages/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readMyService",
+      "Resource": "TaskService"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readMyService",
+      "Resource": "TaskService/Tasks"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readMyService",
+      "Resource": "TaskService/Tasks/[^/]"
+    },
+    {
+      "Method": "DELETE",
+      "Permission": "removeTask",
+      "Resource": "TaskService/Tasks/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readMyService",
+      "Resource": "TaskService/Tasks/[^/]+/monitor"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readTopologyLink",
+      "Resource": "prai/uppsala_2/TopologyLinks"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readTopologyLink",
+      "Resource": "prai/uppsala_2/TopologyLinks/[^/]"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readVPODs",
+      "Resource": "prai/uppsala_2/VPODs"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readVPODs",
+      "Resource": "prai/uppsala_2/VPODs/[^/]"
+    },
+    {
+      "Method": "PATCH",
+      "Permission": "updateVPOD",
+      "Resource": "prai/uppsala_2/VPODs/[^/]"
+    },
+    {
+      "Method": "DELETE",
+      "Permission": "removeVPOD",
+      "Resource": "prai/uppsala_2/VPODs/[^/]"
+    },
+    {
+      "Method": "POST",
+      "Permission": "VPOD.Allocate",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Actions/prai2VPOD.Allocate"
+    },
+    {
+      "Method": "POST",
+      "Permission": "VPOD.Deallocate",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Actions/prai2VPOD.Deallocate"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readVPODs",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Systems"
+    },
+    {
+      "Method": "GET",
+      "Permission": "readVPODs",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Systems/[^/]"
+    },
+    {
+      "Method": "POST",
+      "Permission": "VPOD.ConnectManualSelectedPorts",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Actions/prai2VPOD.ConnectManualSelectedPorts"
+    },
+    {
+      "Method": "POST",
+      "Permission": "VPOD.CreateL2Network",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Actions/prai2VPOD.CreateL2Network"
+    },
+    {
+      "Method": "POST",
+      "Permission": "VPOD.CreateL2NetworkWithAutomaticConnectivityForSelectedPorts",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Actions/prai2VPOD.CreateL2NetworkWithAutomaticConnectivityForSelectedPorts"
+    },
+    {
+      "Method": "POST",
+      "Permission": "VPOD.CreateL2NetworkWithAutomaticConnectivityForAllPorts",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Actions/prai2VPOD.CreateL2NetworkWithAutomaticConnectivityForAllPorts"
+    },
+    {
+      "Method": "POST",
+      "Permission": "VPOD.DisconnectManualSelectedPorts",
+      "Resource": "prai/uppsala_2/VPODs/[^/]+/Actions/prai2VPOD.DisconnectManualSelectedPorts"
+    }
+  ]
+}

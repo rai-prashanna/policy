@@ -1,4 +1,4 @@
-package authz.policy
+package authz.redfish.v1.policy
 
 import data.Roles as roles
 import data.Statements as policies

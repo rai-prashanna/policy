@@ -94,7 +94,7 @@ curl -X POST --data-binary @test_input2.json http://localhost:8181/v1/data/authz
 
 rate(permissionHandler_authorization_requests_requests_latency_seconds_sum[60m])/rate(permissionHandler_authorization_requests_requests_latency_seconds_count[60m])
 
-rate(opa_authorization_requests_requests_latency_seconds_sum[60m])/rate(opa_authorization_requests_requests_latency_seconds_count[60m])
+rate(opa_authorization_requests_requests_latency_seconds_sum[2m])/rate(opa_authorization_requests_requests_latency_seconds_count[2m])
 
 go_memstats_heap_alloc_bytes{job="opa",instance="testserver:32323"}/1000000
 
@@ -144,7 +144,7 @@ node-exporter-full
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build -b tmp/fine-grained-policies.rego -O=1 --entrypoint authz/redfish/v1/fine/policy/batch_allow
 
 authz.redfish.v1.fine.policy
-* /home/epraria/programs/opa_linux_amd64 build -t wasm --entrypoint authz/redfish/v1/policy/allow
+* /home/epraria/programs/opa_linux_amd64-0.52.0 build -t wasm --entrypoint authz/redfish/v1/policy/allow
 
 
 * source /home/epraria/.wasmer/wasmer.sh
@@ -157,3 +157,98 @@ authz.redfish.v1.fine.policy
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan /repo/policy/tmp/optimizedregos --entrypoint authz/redfish/v1/fine/policy/allow
 
 * /proj/athena/tools/intellij/run.sh
+
+
+opa build -t wasm –e ‘opa/wasm/test/allowed’ policy.rego data.json
+
+
+## cheatsheets
+* kubectl get pvc prometheus-data-pvc
+* kubectl describe pvc prometheus-data-pvc
+* kubectl get pods --namespace epraria -o wide --field-selector spec.nodeName=worker021
+* kubectl get pods --namespace epraria -o wide
+* Successfully wrote ssh password to vault
+
+
+## WASM 
+/app/vbuild/UBUNTU20-x86_64/python/3.10.5/bin/python3 -m pip install -U -r requirements.txt
+
+The contents of pip dependecies are as follows 
+
+```
+certifi==2022.12.7
+charset-normalizer
+click==8.1.3
+docutils==0.19
+Flask==2.2.3
+idna==3.4
+importlib-metadata==6.3.0
+itsdangerous==2.1.2
+Jinja2==3.1.2
+MarkupSafe==2.1.2
+opa-wasm==0.3.2
+protobuf==4.21.9
+pycparser==2.21
+requests==2.28.2
+six==1.16.0
+urllib3==1.26.15
+wasmer==1.1.0
+wasmer_compiler_cranelift==1.1.0
+Werkzeug==2.2.3
+zipp==3.15.0
+
+```
+
+
+/home/epraria/programs/opa_linux_amd64-0.52.0 build -t wasm . --entrypoint authz/redfish/v1/policy/allow
+
+```
+# Import the module
+from opa_wasm import OPAPolicy
+
+# Load a policy by specifying its file path
+policy = OPAPolicy('./policy.wasm')
+
+# Optional: Set policy data
+#policy.set_data({"role": "admin"})
+
+# Evaluate the policy
+input = {"role": "admin1"}
+result = policy.evaluate(input)
+print("the result of wasm ")
+print(result)
+
+```
+## build wasm binary 
+/home/epraria/programs/opa_linux_amd64-0.52.0 build -t wasm policy.rego e 'authz/policy/allow'
+
+/home/epraria/programs/opa_linux_amd64-0.52.0 build -O=1 .
+
+/home/epraria/programs/opa_linux_amd64-0.52.0 eval data.lab.test_all --data v0.rego --input input.json
+
+/home/epraria/programs/opa_linux_amd64-0.52.0 eval data.authz.policy.allow --input input.json -b bundle.tar.gz
+
+
+docker run -p 9090:9090 --name prai ---network="host" prometheus:v2
+
+
+for i in {1..500};do getAccessToken AllAdmin;java -jar /repo/performanceTesting/performanceTesting/target/performanceTesting.jar $TOKEN;done
+
+
+* rate(permission_handler_requests_latency_seconds_sum[2m])/rate(permission_handler_requests_latency_seconds_count[2m])
+* rate(opa_requests_latency_seconds_sum[2m])/rate(opa_requests_latency_seconds_count[2m])
+* rate(jarl_requests_latency_seconds_sum[2m])/rate(jarl_requests_latency_seconds_count[2m])
+
+for i in {1..500};do getAccessToken AllAdmin;java -jar target/performanceTesting.jar 30161 $TOKEN "PERMISSIONHANDLER" 7500 9080 ;done 
+
+## create namespace in kubectl 
+* kubectl config set-context --current --namespace=eprariaopa
+* kubectl create ns eprariaopa
+* kubectl config set-context --current --namespace=eprariajarl
+* kubectl create ns eprariajarl
+* kubectl config get-context --current
+  
+## get current namespace
+* kubectl config current-context
+
+* kubectl get svc eric-sec-access-mgmt-http --namespace=epraria --template='{{.spec.clusterIP}}'

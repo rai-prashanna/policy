@@ -143,7 +143,6 @@ node-exporter-full
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build -b tmp/ -O=1
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build -b tmp/fine-grained-policies.rego -O=1 --entrypoint authz/redfish/v1/fine/policy/batch_allow
 
-authz.redfish.v1.fine.policy
 * /home/epraria/programs/opa_linux_amd64-0.52.0 build -t wasm --entrypoint authz/redfish/v1/policy/allow
 
 
@@ -220,7 +219,7 @@ print(result)
 
 ```
 ## build wasm binary 
-/home/epraria/programs/opa_linux_amd64-0.52.0 build -t wasm policy.rego e 'authz/policy/allow'
+/home/epraria/programs/opa_linux_amd64-0.52.0 build -t wasm fine.rego -e 'authz/redfish/v1/fine/policy/allow'
 
 /home/epraria/programs/opa_linux_amd64-0.52.0 build -O=1 .
 
@@ -235,9 +234,9 @@ docker run -p 9090:9090 --name prai ---network="host" prometheus:v2
 for i in {1..500};do getAccessToken AllAdmin;java -jar /repo/performanceTesting/performanceTesting/target/performanceTesting.jar $TOKEN;done
 
 
-* rate(permission_handler_requests_latency_seconds_sum[2m])/rate(permission_handler_requests_latency_seconds_count[2m])
-* rate(opa_requests_latency_seconds_sum[2m])/rate(opa_requests_latency_seconds_count[2m])
-* rate(jarl_requests_latency_seconds_sum[2m])/rate(jarl_requests_latency_seconds_count[2m])
+* rate(permission_handler_requests_response_latency_seconds_sum[2m])/rate(permission_handler_requests_response_latency_seconds_count[2m])
+* rate(opa_decision_latency_seconds_sum[2m])/rate(opa_decision_latency_seconds_count[2m])
+* rate(jarl_authorization_decision_latency_seconds_sum[2m])/rate(jarl_authorization_decision_latency_seconds_count[2m])
 
 for i in {1..500};do getAccessToken AllAdmin;java -jar target/performanceTesting.jar 30161 $TOKEN "PERMISSIONHANDLER" 7500 9080 ;done 
 
@@ -247,8 +246,12 @@ for i in {1..500};do getAccessToken AllAdmin;java -jar target/performanceTesting
 * kubectl config set-context --current --namespace=eprariajarl
 * kubectl create ns eprariajarl
 * kubectl config get-context --current
-  
+* kubectl config set-context --current --namespace=eprariawasm
+* kubectl create ns eprariawasm
 ## get current namespace
 * kubectl config current-context
 
 * kubectl get svc eric-sec-access-mgmt-http --namespace=epraria --template='{{.spec.clusterIP}}'
+
+
+for i in {1..2};do getAccessToken AllAdmin;java -jar target/performanceTesting.jar 30161 $TOKEN "PERMISSIONHANDLER" 7500 9080 ;done 

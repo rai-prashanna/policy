@@ -1,0 +1,3 @@
+rate(opa_decision_latency_seconds_sum{job="opa-exporter"}[2m])/rate(opa_decision_latency_seconds_count{job="opa-exporter"}[2m])
+
+rate(permission_handler_requests_response_latency_seconds_sum{job="permissionHandler-exporter"}[2m])/rate(permission_handler_requests_response_latency_seconds_count{job="permissionHandler-exporter"}[2m])

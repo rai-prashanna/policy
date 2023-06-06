@@ -199,7 +199,7 @@ zipp==3.15.0
 ```
 
 
-/home/epraria/programs/opa_linux_amd64-0.52.0 build -t wasm . --entrypoint authz/redfish/v1/policy/allow
+/home/epraria/programs/opa_linux_amd64_v0.53 build -t wasm . --entrypoint authz/redfish/v1/policy/allow
 
 ```
 # Import the module
@@ -255,3 +255,13 @@ for i in {1..500};do getAccessToken AllAdmin;java -jar target/performanceTesting
 
 
 for i in {1..2};do getAccessToken AllAdmin;java -jar target/performanceTesting.jar 30161 $TOKEN "PERMISSIONHANDLER" 7500 9080 ;done 
+
+
+
+curl --no-buffer -XGET --unix-socket /home/epraria/programs/socket http://localhost/events
+
+
+/home/epraria/programs/opa_linux_amd64_v0.53 run --server bundle.tar.gz -a unix:///home/epraria/programs/socket
+
+
+netstat -a -p --unix | grep opa

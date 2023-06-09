@@ -23,6 +23,8 @@
 ## optimize bundle creation  with entrypoint
 * /home/epraria/programs/opa_linux_amd64 build -b policies/ -O=1 --entrypoint omc/allow
 
+--entrypoint authz/redfish/v1/policy authz/redfish/v1/fine/policy
+
 --entrypoint authz/redfish/v1/policy/allow
 * /home/epraria/programs/opa_linux_amd64 build -b pathOfregoFiles/ -O=1 --entrypoint packageName/rule-Head
 * /home/epraria/programs/opa_linux_amd64 build -b policy.rego -O=1 --entrypoint authz/redfish/v1/policy/allow
@@ -47,7 +49,7 @@ docker run --mount type=bind,source="$(pwd)"/,target=/policies -p 8181:8181 open
 * curl -X POST --data-binary @test_input4.json http://localhost:8181/v1/data/authz/redfish/v1/fine/policy
 * curl -X POST --data-binary @test_input1.json http://localhost:8181/v1/data/authz/redfish/v1/policy
 
-fine.policy
+* curl -X POST --data-binary @test_input1.json http://b303-omc-01.pcl.seki.gic.ericsson.se:32323/v1/data/authz/redfish/v1/policy
 
 curl -k -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"input":{"method":"GET","resource":"Systems","roles":["OmcSecurityAdministrator","DeleteJob","OmcEquipmentAdministrator","OmcEquipmentObserver","OmcSystemAdministrator","CreateJob","OmcSystemObserver"]}}' http://testserver:32323/v1/data/authz/redfish/v1/policy
 
@@ -265,3 +267,7 @@ curl --no-buffer -XGET --unix-socket /home/epraria/programs/socket http://localh
 
 
 netstat -a -p --unix | grep opa
+
+opa eval --explain=full
+
+/home/epraria/programs/opa_linux_amd64_v0.53.1 build -b -O=2 . --entrypoint authz/redfish/v1/policy --entrypoint authz/redfish/v1/fine/policy

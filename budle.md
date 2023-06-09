@@ -17,5 +17,6 @@ curl -X PUT -d @myXmlFile.xml --unix-socket /var/run/myunixsocket
 
 curl -X POST --data-binary @test_input1.json --unix-socket /home/epraria/programs/socket http://localhost/v1/data/authz/redfish/v1/policy
 
-/repo/policy/test-data
 
+
+/home/epraria/programs/opa_linux_amd64_v0.53.1 build -b -O=2 . --entrypoint authz/redfish/v1/policy --entrypoint authz/redfish/v1/fine/policy

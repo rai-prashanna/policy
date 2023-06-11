@@ -1,7 +1,7 @@
 {
     "input": {
       "method": "GET ",
-      "resource": "/Systems",
+      "resource": "Systems",
       "roles": [
         "OmcSecurityAdministrator ",
         "DeleteJob ",

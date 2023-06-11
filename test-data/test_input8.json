@@ -1,9 +1,9 @@
 {
     "input":{
         "method": "GET",
-        "resource": "Chassis",
+        "resource": "AggregationService",
         "roles": [
-            "CreateJob","OmcEquipmentObserver"
+            "OmcSystemObserver"
         ]
     }
 }

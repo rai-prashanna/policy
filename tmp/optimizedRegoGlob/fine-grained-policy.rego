@@ -1,13 +1,14 @@
 package authz.redfish.v1.fine.policy
 
 allow = __result__ {
-	glob.match("files/upload/updateservice/package", ["/"], input.resource)
+	contains("files/upload/updateservice/package", input.resource)
 	"POST" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 	__result__ = true
 }
 
 allow = __result__ {
+	contains("AggregationService", input.resource)
 	glob.match("AggregationService", ["/"], input.resource)
 	"GET" = input.method
 	"CreateJob" = input.roles[__local0__1]

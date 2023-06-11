@@ -1,0 +1,9 @@
+{
+    "input":{
+        "method": "GET",
+        "resource": "Oem/Ericsson_2/AlarmService/InternalAlarms",
+        "roles": [
+            "OmcSystemObserver"
+        ]
+    }
+}

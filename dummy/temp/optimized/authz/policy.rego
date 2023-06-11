@@ -1,13 +1,16 @@
 package authz.policy
-
 default allow = false
 
+# METADATA
+# entrypoint: true
 allow {
 	regex.match("AService", input.resource)
 	"GET" = input.method
 	"Administrator" = input.roles[__local0__1]
 }
 
+# METADATA
+# entrypoint: true
 allow {
 	regex.match("AService", input.resource)
 	"GET" = input.method

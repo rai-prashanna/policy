@@ -3,97 +3,97 @@ package authz.redfish.v1.policy
 default allow = false
 
 allow {
-	glob.match("AggregationService", ["/"], input.resource)
+	contains("AggregationService", input.resource)
 	"GET" = input.method
 	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService", ["/"], input.resource)
+	contains("AggregationService", input.resource)
 	"GET" = input.method
 	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService", ["/"], input.resource)
+	contains("AggregationService", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService", ["/"], input.resource)
+	contains("AggregationService", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService", ["/"], input.resource)
+	contains("AggregationService", input.resource)
 	"GET" = input.method
 	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService", ["/"], input.resource)
+	contains("AggregationService", input.resource)
 	"GET" = input.method
 	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService", ["/"], input.resource)
+	contains("AggregationService", input.resource)
 	"GET" = input.method
 	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
+	contains("AggregationService/AggregationSources", input.resource)
 	"GET" = input.method
 	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
+	contains("AggregationService/AggregationSources", input.resource)
 	"GET" = input.method
 	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
+	contains("AggregationService/AggregationSources", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
+	contains("AggregationService/AggregationSources", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
+	contains("AggregationService/AggregationSources", input.resource)
 	"GET" = input.method
 	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
+	contains("AggregationService/AggregationSources", input.resource)
 	"GET" = input.method
 	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
+	contains("AggregationService/AggregationSources", input.resource)
 	"GET" = input.method
 	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
+	contains("AggregationService/AggregationSources", input.resource)
 	"POST" = input.method
 	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
+	contains("AggregationService/AggregationSources", input.resource)
 	"POST" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
@@ -273,13 +273,13 @@ allow {
 }
 
 allow {
-	glob.match("Chassis", ["/"], input.resource)
+	contains("Chassis", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Chassis", ["/"], input.resource)
+	contains("Chassis", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
@@ -321,31 +321,31 @@ allow {
 }
 
 allow {
-	glob.match("Managers", ["/"], input.resource)
+	contains("Managers", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Managers", ["/"], input.resource)
+	contains("Managers", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Managers", ["/"], input.resource)
+	contains("Managers", input.resource)
 	"GET" = input.method
 	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Managers", ["/"], input.resource)
+	contains("Managers", input.resource)
 	"GET" = input.method
 	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Managers", ["/"], input.resource)
+	contains("Managers", input.resource)
 	"GET" = input.method
 	"OmcSystemObserver" = input.roles[__local0__1]
 }
@@ -741,61 +741,61 @@ allow {
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService", input.resource)
 	"GET" = input.method
 	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService", input.resource)
 	"GET" = input.method
 	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService", input.resource)
 	"GET" = input.method
 	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/Alarms", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/Alarms", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/Alarms", input.resource)
 	"GET" = input.method
 	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/Alarms", input.resource)
 	"GET" = input.method
 	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/Alarms", input.resource)
 	"GET" = input.method
 	"OmcSystemObserver" = input.roles[__local0__1]
 }
@@ -831,49 +831,49 @@ allow {
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/ExternalAlarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/ExternalAlarms", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/ExternalAlarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/ExternalAlarms", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/ExternalAlarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/ExternalAlarms", input.resource)
 	"GET" = input.method
 	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/InternalAlarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/InternalAlarms", input.resource)
 	"GET" = input.method
 	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/InternalAlarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/InternalAlarms", input.resource)
 	"GET" = input.method
 	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/AlarmService/InternalAlarms", ["/"], input.resource)
+	contains("Oem/Ericsson_2/AlarmService/InternalAlarms", input.resource)
 	"GET" = input.method
 	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/Bridges", ["/"], input.resource)
+	contains("Oem/Ericsson_2/Bridges", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/Bridges", ["/"], input.resource)
+	contains("Oem/Ericsson_2/Bridges", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
@@ -939,13 +939,13 @@ allow {
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/DataBridges", ["/"], input.resource)
+	contains("Oem/Ericsson_2/DataBridges", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/DataBridges", ["/"], input.resource)
+	contains("Oem/Ericsson_2/DataBridges", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
@@ -1011,13 +1011,13 @@ allow {
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/Racks", ["/"], input.resource)
+	contains("Oem/Ericsson_2/Racks", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/Racks", ["/"], input.resource)
+	contains("Oem/Ericsson_2/Racks", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
@@ -1035,19 +1035,19 @@ allow {
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/RedfishAssets", ["/"], input.resource)
+	contains("Oem/Ericsson_2/RedfishAssets", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/RedfishAssets", ["/"], input.resource)
+	contains("Oem/Ericsson_2/RedfishAssets", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/RedfishAssets", ["/"], input.resource)
+	contains("Oem/Ericsson_2/RedfishAssets", input.resource)
 	"GET" = input.method
 	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
@@ -1083,13 +1083,13 @@ allow {
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/Relays", ["/"], input.resource)
+	contains("Oem/Ericsson_2/Relays", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/Relays", ["/"], input.resource)
+	contains("Oem/Ericsson_2/Relays", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
@@ -1107,13 +1107,13 @@ allow {
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/SDIPods", ["/"], input.resource)
+	contains("Oem/Ericsson_2/SDIPods", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/SDIPods", ["/"], input.resource)
+	contains("Oem/Ericsson_2/SDIPods", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
@@ -1287,13 +1287,13 @@ allow {
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/Switches", ["/"], input.resource)
+	contains("Oem/Ericsson_2/Switches", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/Switches", ["/"], input.resource)
+	contains("Oem/Ericsson_2/Switches", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
@@ -1359,19 +1359,19 @@ allow {
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/TopologyLinks", ["/"], input.resource)
+	contains("Oem/Ericsson_2/TopologyLinks", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/TopologyLinks", ["/"], input.resource)
+	contains("Oem/Ericsson_2/TopologyLinks", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/TopologyLinks/*", ["/"], input.resource)
+	contains("Oem/Ericsson_2/TopologyLinks", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
@@ -1383,13 +1383,13 @@ allow {
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/VPODs", ["/"], input.resource)
+	contains("Oem/Ericsson_2/VPODs", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Oem/Ericsson_2/VPODs", ["/"], input.resource)
+	contains("Oem/Ericsson_2/VPODs", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
@@ -1521,19 +1521,19 @@ allow {
 }
 
 allow {
-	glob.match("Systems", ["/"], input.resource)
+	contains("Systems", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Systems", ["/"], input.resource)
+	contains("Systems", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("Systems/*", ["/"], input.resource)
+	contains("Systems", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
@@ -1695,61 +1695,61 @@ allow {
 }
 
 allow {
-	glob.match("TaskService", ["/"], input.resource)
+	contains("TaskService", input.resource)
 	"GET" = input.method
 	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("TaskService", ["/"], input.resource)
+	contains("TaskService", input.resource)
 	"GET" = input.method
 	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("TaskService", ["/"], input.resource)
+	contains("TaskService", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("TaskService", ["/"], input.resource)
+	contains("TaskService", input.resource)
 	"GET" = input.method
 	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("TaskService", ["/"], input.resource)
+	contains("TaskService", input.resource)
 	"GET" = input.method
 	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("TaskService/Tasks", ["/"], input.resource)
+	contains("TaskService/Tasks", input.resource)
 	"GET" = input.method
 	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("TaskService/Tasks", ["/"], input.resource)
+	contains("TaskService/Tasks", input.resource)
 	"GET" = input.method
 	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("TaskService/Tasks", ["/"], input.resource)
+	contains("TaskService/Tasks", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("TaskService/Tasks", ["/"], input.resource)
+	contains("TaskService/Tasks", input.resource)
 	"GET" = input.method
 	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("TaskService/Tasks", ["/"], input.resource)
+	contains("TaskService/Tasks", input.resource)
 	"GET" = input.method
 	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
@@ -1821,25 +1821,25 @@ allow {
 }
 
 allow {
-	glob.match("UpdateService", ["/"], input.resource)
+	contains("UpdateService", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("UpdateService", ["/"], input.resource)
+	contains("UpdateService", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("UpdateService/Oem/Ericsson_2/Packages", ["/"], input.resource)
+	contains("UpdateService/Oem/Ericsson_2/Packages", input.resource)
 	"GET" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	glob.match("UpdateService/Oem/Ericsson_2/Packages", ["/"], input.resource)
+	contains("UpdateService/Oem/Ericsson_2/Packages", input.resource)
 	"GET" = input.method
 	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
@@ -1863,7 +1863,7 @@ allow {
 }
 
 allow {
-	glob.match("files/upload/updateservice/package", ["/"], input.resource)
+	contains("files/upload/updateservice/package", input.resource)
 	"POST" = input.method
 	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }

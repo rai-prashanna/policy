@@ -1,7 +1,7 @@
 package authz.redfish.v1.fine.policy
 
-batch_allow = __local11__1 {
-	__local11__1 = [__local8__1 |
+batch_allow = __result__ {
+	__result__ = [__local8__1 |
 		__local8__1 = input.resources[__local7__1]
 		__local9__1 = input.methods[__local7__1]
 

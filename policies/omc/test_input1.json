@@ -1,0 +1,12 @@
+{
+    "input":{
+    "method": "POST",
+    "resource": "url",
+    "roles": [
+        "OmcEquipmentObserver",
+        "CreateJob",
+        "DeleteJob",
+        "OmcEquipmentAdministrator"
+    ]
+}
+}

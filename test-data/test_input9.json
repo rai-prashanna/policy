@@ -1,0 +1,13 @@
+{
+    "input":{
+        "method": "GET",
+        "resource": "TaskService/Tasks/1",
+        "roles": [
+            "OmcEquipmentObserver",
+            "CreateJob",
+            "DeleteJob",
+            "OmcSystemAdministrator"
+        ]
+    }
+}
+

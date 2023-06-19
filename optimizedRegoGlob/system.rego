@@ -10,6 +10,12 @@ tokens := {
     }
 }
 default allow = false
+# METADATA
+# title: authorize 
+# description: A rule that determines if input is allowed.
+# authors:
+# - Prashanna Rai <prai931024@gmail.com>
+# entrypoint: true
 allow {                      
     some permission
     lookup_permissions[permission] 

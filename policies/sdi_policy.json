@@ -1,0 +1,24 @@
+{
+  "Statements": [
+      {
+          "Method": "POST",
+          "Resource": "AggregationService/AggregationSources",
+          "Permission": "createAggregationSource"
+      },
+      {
+          "Method": "GET",
+          "Resource": "Chassis",
+          "Permission": "readChassis"
+      },
+      {
+          "Method": "GET",
+          "Resource": "Chassis/{id}",
+          "Permission": "readChassis"
+      },
+      {
+          "Method": "POST",
+          "Resource": "Oem/Ericsson_2/SDIPods/{id}/VPODs",
+          "Permission": "createVPOD"
+      }
+  ]
+}

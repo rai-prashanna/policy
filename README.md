@@ -37,9 +37,9 @@
 
 * /home/epraria/programs/opa_linux_amd64 build -b policies/ -O=0 --entrypoint authz/redfish/v1/policy/allow
 
-* /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan policies/ policy.rego --entrypoint authz/redfish/v1/fine/policy/allow
+* /home/epraria/programs/opa_linux_amd64_v0.53.1 build --target plan policies/ policy.rego --entrypoint authz/redfish/v1/fine/policy/allow
 * 
-* /home/epraria/programs/opa_linux_amd64-0.52.0 build -b policies/ -O=1 --entrypoint authz/redfish/v1/fine/policy/allow
+* /home/epraria/programs/opa_linux_amd64_v0.53.1 build -b policies/ -O=1 --entrypoint authz/redfish/v1/fine/policy/allow
 ## start OPA as REST-API-server 
 docker run --mount type=bind,source="$(pwd)"/,target=/policies -p 8181:8181 openpolicyagent/opa run /policies --server
 
@@ -142,10 +142,12 @@ node-exporter-full
 
 ## ways to generate bundle with optimizations 
 
-* /home/epraria/programs/opa_linux_amd64-0.52.0 build -b tmp/ -O=1
-* /home/epraria/programs/opa_linux_amd64-0.52.0 build -b tmp/fine-grained-policies.rego -O=1 --entrypoint authz/redfish/v1/fine/policy/batch_allow
+* /home/epraria/programs/opa_linux_amd64_v0.53.1 build -b tmp/ -O=1
+* /home/epraria/programs/opa_linux_amd64_v0.53.1 build -b tmp/fine-grained-policies.rego -O=1 --entrypoint authz/redfish/v1/fine/policy/batch_allow
 
-* /home/epraria/programs/opa_linux_amd64-0.52.0 build -t wasm --entrypoint authz/redfish/v1/policy/allow
+# build wasm binary 
+* /home/epraria/programs/opa_linux_amd64_v0.53.1 build coarsed-grained-policy.rego -t wasm --entrypoint authz/redfish/v1/policy/allow
+* /home/epraria/programs/opa_linux_amd64_v0.53.1 build fine-grained-policy.rego -t wasm --entrypoint authz/redfish/v1/fine/policy/batch_allow
 
 
 * source /home/epraria/.wasmer/wasmer.sh
@@ -153,9 +155,9 @@ node-exporter-full
 * /app/vbuild/UBUNTU20-x86_64/python/3.10.5/bin/python3 -m pip install -U -r requirements.txt
 
 
-* /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan tmp/fine-grained-policies.rego 
+* /home/epraria/programs/opa_linux_amd64_v0.53.1 build --target plan tmp/fine-grained-policies.rego 
 
-* /home/epraria/programs/opa_linux_amd64-0.52.0 build --target plan /repo/policy/tmp/optimizedregos --entrypoint authz/redfish/v1/fine/policy/allow
+* /home/epraria/programs/opa_linux_amd64_v0.53.1 build --target plan /repo/policy/tmp/optimizedregos --entrypoint authz/redfish/v1/fine/policy/allow
 
 * /proj/athena/tools/intellij/run.sh
 
@@ -221,13 +223,13 @@ print(result)
 
 ```
 ## build wasm binary 
-/home/epraria/programs/opa_linux_amd64-0.52.0 build -t wasm fine.rego -e 'authz/redfish/v1/fine/policy/allow'
+/home/epraria/programs/opa_linux_amd64_v0.53.1 build -t wasm fine.rego -e 'authz/redfish/v1/fine/policy/allow'
 
-/home/epraria/programs/opa_linux_amd64-0.52.0 build -O=1 .
+/home/epraria/programs/opa_linux_amd64_v0.53.1 build -O=1 .
 
-/home/epraria/programs/opa_linux_amd64-0.52.0 eval data.lab.test_all --data v0.rego --input input.json
+/home/epraria/programs/opa_linux_amd64_v0.53.1 eval data.lab.test_all --data v0.rego --input input.json
 
-/home/epraria/programs/opa_linux_amd64-0.52.0 eval data.authz.policy.allow --input input.json -b bundle.tar.gz
+/home/epraria/programs/opa_linux_amd64_v0.53.1 eval data.authz.policy.allow --input input.json -b bundle.tar.gz
 
 
 docker run -p 9090:9090 --name prai ---network="host" prometheus:v2

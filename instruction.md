@@ -43,3 +43,12 @@ curl -X POST --data-binary @test_input6.json 'http://localhost:9191/v1/data/auth
 -srckeystore /export/application/app.p12 -srcstoretype pkcs12 \
 -deststorepass manning123 -destkeystore /export/application/app.jks \
 -deststoretype JKS
+
+
+git push tr:kernel/common HEAD:refs/for/experimental%r=thejasvy.m.v@ericsson.com
+
+
+
+git clone https://epraria@gerrit.ericsson.se/a/OMC/OMC_API_Server && (cd OMC_API_Server && mkdir -p .git/hooks && curl -Lo `git rev-parse --git-dir`/hooks/commit-msg https://epraria@gerrit.ericsson.se/tools/hooks/commit-msg; chmod +x `git rev-parse --git-dir`/hooks/commit-msg)
+
+

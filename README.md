@@ -117,6 +117,16 @@ node-exporter-full
 * cd jarl/core/
 * lein run /repo/policy2/bundle.tar.gz --input /repo/policy2/data.json 
 * lein run /repo/policy/optimizedPlans/bundle.tar.gz --input /repo/policy2/data.json
+
+  402  ./gradlew build
+  403  cd api/
+  404  ls
+  405  ./gradlew build
+  406  ./gradlew clean build 
+  407  ls
+  408  ./gradlew clean build 
+  409  ./gradlew jar, ./gradlew api
+
   
 * /home/epraria/programs/opa_linux_amd64 build --target plan policy.rego
 * mvn install:install-file -Dfile=repo/jarl/core/target/jarl-0.1.0-SNAPSHOT-standalone.jar -DgroupId=com.prai -DartifactId=jarl -Dversion=0.1.0-SNAPSHOT -Dpackaging=jar -DgeneratePom=true

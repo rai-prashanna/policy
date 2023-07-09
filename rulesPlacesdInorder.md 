@@ -1,0 +1,9 @@
+# rules places into HashMap datastructure
+
+* size = 143
+
+GET:Systems/[^/]+/Processors/[^/]+/, GET:Oem/Ericsson_2/DataBridges/, GET:Oem/Ericsson_2/Racks/, GET:Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/, POST:Managers/[^/]+/Oem/Ericsson_2/TrustedCertificates/, DELETE:Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/[^/]+/, POST:Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.UpdateManagerCancel/, GET:TaskService/Tasks/, GET:Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/, GET:Managers/[^/]+/NetworkProtocol/, POST:Managers/[^/]+/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup/, GET:Managers/[^/]+/Certificates/[^/]+/, GET:Oem/Ericsson_2/Bridges/[^/]+/VLANs/[^/]+/, GET:Chassis/[^/]+/, POST:Oem/Ericsson_2/SDIPods/[^/]+/Actions/Ericsson2SDIPod.ModifyPmJob/, GET:Oem/Ericsson_2/Switches/[^/]+/Pims/[^/]+/, PATCH:Systems/[^/]+/, GET:Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Packages/, GET:Managers/[^/]+/LogServices/, POST:Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/[^/]+/Actions/Ericsson2AssetUpgradeJob.Abort/, POST:Managers/[^/]+/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.CreateAssetUpgradeJob/, GET:Oem/Ericsson_2/Switches/[^/]+/ExternalLinks/, POST:Oem/Ericsson_2/VPODs/[^/]+/Actions/Ericsson2VPOD.DisconnectManualSelectedPorts/, GET:Oem/Ericsson_2/SDIPods/[^/]+/Racks/, GET:Oem/Ericsson_2/SDIPods/[^/]+/VPODs/, POST:AggregationService/AggregationSources/[^/]+/Actions/Oem/Ericsson2AggregationSource.RegenerateSNMPCredentials/, POST:AggregationService/AggregationSources/, 
+
+GET:Oem/Ericsson_2/AlarmService/InternalAlarms/, 
+
+DELETE:Managers/[^/]+/Oem/Ericsson_2/TrustedCertificates/[^/]+/]

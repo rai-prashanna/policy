@@ -31,11 +31,13 @@
 * /home/epraria/programs/opa_linux_amd64 build -b policies/finepolicy.rego -O=1 --entrypoint authz/redfish/v1/fine/policy/allow
 * /home/epraria/programs/opa_linux_amd64 build --target plan finepolicy.rego --entrypoint authz/redfish/v1/fine/policy/allow
 
-* /home/epraria/programs/opa_linux_amd64 build --target plan policies/coarse-grained-policies.rego --entrypoint authz/redfish/v1/policy/allow
+
 
 * /home/epraria/programs/opa_linux_amd64 build pathOfregoFiles/ -O=1 policies/coarse-grained-policies.rego --entrypoint authz/redfish/v1/policy/allow
 
 * /home/epraria/programs/opa_linux_amd64 build -b policies/ -O=0 --entrypoint authz/redfish/v1/policy/allow
+
+* /home/epraria/programs/opa_linux_amd64 build --target plan policies/coarse-grained-policies.rego --entrypoint authz/redfish/v1/policy/allow
 
 * /home/epraria/programs/opa_linux_amd64_v0.53.1 build --target plan policies/ policy.rego --entrypoint authz/redfish/v1/fine/policy/allow
 * 

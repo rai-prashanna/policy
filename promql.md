@@ -1,4 +1,7 @@
 ### decision latency
+
+* rate(unjarl_requests_response_latency_seconds_sum[2m])/rate(unjarl_requests_response_latency_seconds_count[2m])
+
 * rate(jarl_authorization_decision_latency_seconds_sum[2m])/rate(jarl_authorization_decision_latency_seconds_count[2m])
 * rate(opa_http_decision_latency_seconds_sum[2m])/rate(opa_http_decision_latency_seconds_count[2m])
 * rate(opa_unix_socket_decision_latency_seconds_sum[2m])/rate(opa_unix_socket_decision_latency_seconds_count[2m])

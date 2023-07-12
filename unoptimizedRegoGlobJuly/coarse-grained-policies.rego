@@ -14,7 +14,7 @@ default allow =false
 # entrypoint: true
 allow if {
 	policy = emc_policies[_]
-	regex.match(policy.Resource, input.resource)
+    glob.match(policy.Resource, ["/"],input.resource)
 	policy.Method == input.method
 	some index, role in input.roles
 	some perm in emc_roles[role]

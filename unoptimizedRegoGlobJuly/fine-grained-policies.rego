@@ -13,13 +13,12 @@ import future.keywords
 # entrypoint: true
 allow if {
 	policy = emc_policies[_]
-	regex.match(policy.Resource, input.resource)
+	glob.match(policy.Resource, ["/"], input.resource)
 	policy.Method == input.method
 	some index, role in input.roles
 	some perm in emc_roles[role]
 	perm == policy.Permission
 }
-
 
 # METADATA
 # title: authorize 
@@ -37,3 +36,5 @@ batch_allow = [url |
 		"roles": input.roles,
 	}
 ]
+
+

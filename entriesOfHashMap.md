@@ -1,4 +1,5 @@
-PUT:AggregationService/AggregationSources/[^/]+/, GET:TaskService/, 
+PUT:AggregationService/AggregationSources/[^/]+/, 
+GET:TaskService/, 
 GET:Systems/[^/]+/Oem/Ericsson_2/BiosAttributes/, 
 GET:Oem/Ericsson_2/Relays/, 
 GET:Systems/[^/]+/Memory/, 

@@ -3,2489 +3,1867 @@ package authz.redfish.v1.policy
 default allow = false
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService", ["/"], __local15__1)
+	glob.match("AggregationService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService", ["/"], __local15__1)
+	glob.match("AggregationService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"DeleteJob" = __local1__1
+	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService", ["/"], __local15__1)
+	glob.match("AggregationService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService", ["/"], __local15__1)
+	glob.match("AggregationService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService", ["/"], __local15__1)
+	glob.match("AggregationService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService", ["/"], __local15__1)
+	glob.match("AggregationService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService", ["/"], __local15__1)
+	glob.match("AggregationService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"DeleteJob" = __local1__1
+	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"DeleteJob" = __local1__1
+	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"DeleteJob" = __local1__1
+	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"PATCH" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*", ["/"], input.resource)
 	"PATCH" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Actions/Oem/Ericsson2AggregationSource.RegenerateSNMPCredentials", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Actions/Oem/Ericsson2AggregationSource.RegenerateSNMPCredentials", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Actions/Oem/Ericsson2AggregationSource.SetLogServer", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Actions/Oem/Ericsson2AggregationSource.SetLogServer", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"DeleteJob" = __local1__1
+	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"DeleteJob" = __local1__1
+	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], __local15__1)
+	glob.match("AggregationService/AggregationSources/*/Oem/Ericsson_2/TrustedPublicKeys/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Chassis", ["/"], __local15__1)
+	glob.match("Chassis", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Chassis", ["/"], __local15__1)
+	glob.match("Chassis", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Chassis/*", ["/"], __local15__1)
+	glob.match("Chassis/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Chassis/*", ["/"], __local15__1)
+	glob.match("Chassis/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Chassis/*/Power", ["/"], __local15__1)
+	glob.match("Chassis/*/Power", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Chassis/*/Power", ["/"], __local15__1)
+	glob.match("Chassis/*/Power", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Chassis/*/Thermal", ["/"], __local15__1)
+	glob.match("Chassis/*/Thermal", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Chassis/*/Thermal", ["/"], __local15__1)
+	glob.match("Chassis/*/Thermal", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers", ["/"], __local15__1)
+	glob.match("Managers", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers", ["/"], __local15__1)
+	glob.match("Managers", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers", ["/"], __local15__1)
+	glob.match("Managers", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers", ["/"], __local15__1)
+	glob.match("Managers", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers", ["/"], __local15__1)
+	glob.match("Managers", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*", ["/"], __local15__1)
+	glob.match("Managers/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*", ["/"], __local15__1)
+	glob.match("Managers/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*", ["/"], __local15__1)
+	glob.match("Managers/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*", ["/"], __local15__1)
+	glob.match("Managers/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*", ["/"], __local15__1)
+	glob.match("Managers/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Certificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Certificates/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/LogServices", ["/"], __local15__1)
+	glob.match("Managers/*/LogServices", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/LogServices", ["/"], __local15__1)
+	glob.match("Managers/*/LogServices", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/LogServices/*", ["/"], __local15__1)
+	glob.match("Managers/*/LogServices/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/LogServices/*", ["/"], __local15__1)
+	glob.match("Managers/*/LogServices/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/LogServices/*/Actions/Oem/Ericsson2LogService.RetrieveLog", ["/"], __local15__1)
+	glob.match("Managers/*/LogServices/*/Actions/Oem/Ericsson2LogService.RetrieveLog", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/NetworkProtocol", ["/"], __local15__1)
+	glob.match("Managers/*/NetworkProtocol", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/NetworkProtocol", ["/"], __local15__1)
+	glob.match("Managers/*/NetworkProtocol", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteBackupService/Actions/Ericsson2RemoteBackupService.CreateAndTransferBackup", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.CreateAssetUpgradeJob", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.CreateAssetUpgradeJob", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.RemoveSoftwareVersion", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.RemoveSoftwareVersion", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.UpdateManager", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.UpdateManager", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.UpdateManagerCancel", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.UpdateManagerCancel", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.UploadSoftwarePackage", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Actions/Ericsson2RemoteUpdateService.UploadSoftwarePackage", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/*/Actions/Ericsson2AssetUpgradeJob.Abort", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/*/Actions/Ericsson2AssetUpgradeJob.Abort", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/*/Actions/Ericsson2AssetUpgradeJob.Start", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/AssetUpgradeJobs/*/Actions/Ericsson2AssetUpgradeJob.Start", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Packages", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Packages", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Packages", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Packages", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Packages/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Packages/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Packages/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Packages/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Packages/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/Packages/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/SoftwareVersions", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/SoftwareVersions", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/SoftwareVersions", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/SoftwareVersions", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/SoftwareVersions/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/SoftwareVersions/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/SoftwareVersions/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/RemoteUpdateService/SoftwareVersions/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], __local15__1)
+	glob.match("Managers/*/Oem/Ericsson_2/TrustedCertificates/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/Alarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/Alarms/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/Alarms/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/Alarms/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/Alarms/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/Alarms/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/Alarms/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/ExternalAlarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/ExternalAlarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/ExternalAlarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/ExternalAlarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/ExternalAlarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/ExternalAlarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/InternalAlarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/InternalAlarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/InternalAlarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/InternalAlarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/AlarmService/InternalAlarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/AlarmService/InternalAlarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemObserver" = __local1__1
+	"OmcSystemObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges/*/BridgePorts", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges/*/BridgePorts", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges/*/BridgePorts", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges/*/BridgePorts", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges/*/BridgePorts/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges/*/BridgePorts/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges/*/BridgePorts/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges/*/BridgePorts/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges/*/VLANs", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges/*/VLANs", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges/*/VLANs", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges/*/VLANs", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges/*/VLANs/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges/*/VLANs/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Bridges/*/VLANs/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Bridges/*/VLANs/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges/*/BridgePorts", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges/*/BridgePorts", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges/*/BridgePorts", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges/*/BridgePorts", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges/*/BridgePorts/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges/*/BridgePorts/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges/*/BridgePorts/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges/*/BridgePorts/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges/*/VLANs", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges/*/VLANs", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges/*/VLANs", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges/*/VLANs", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges/*/VLANs/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges/*/VLANs/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/DataBridges/*/VLANs/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/DataBridges/*/VLANs/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Racks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Racks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Racks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Racks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Racks/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Racks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Racks/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Racks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/RedfishAssets", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/RedfishAssets", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/RedfishAssets", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/RedfishAssets", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/RedfishAssets", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/RedfishAssets", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/RedfishAssets/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/RedfishAssets/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/RedfishAssets/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/RedfishAssets/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/RedfishAssets/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/RedfishAssets/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/RedfishAssets/*/Actions/Ericsson2RedfishAsset.RemoveCredential", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/RedfishAssets/*/Actions/Ericsson2RedfishAsset.RemoveCredential", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/RedfishAssets/*/Actions/Ericsson2RedfishAsset.SetCredential", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/RedfishAssets/*/Actions/Ericsson2RedfishAsset.SetCredential", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Relays", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Relays", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Relays", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Relays", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Relays/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Relays/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Relays/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Relays/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Actions/Ericsson2SDIPod.ModifyPmJob", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Actions/Ericsson2SDIPod.ModifyPmJob", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Alarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Alarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Alarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Alarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Alarms", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Alarms", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Bridges", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Bridges", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Bridges", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Bridges", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/DataBridges", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/DataBridges", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/DataBridges", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/DataBridges", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/PmJobConfiguration", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/PmJobConfiguration", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/PmJobConfiguration", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/PmJobConfiguration", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Racks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Racks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Racks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Racks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/RedfishAssets", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/RedfishAssets", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/RedfishAssets", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/RedfishAssets", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/RedfishAssets", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/RedfishAssets", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Relays", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Relays", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Relays", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Relays", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Switches", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Switches", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Switches", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Switches", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Systems", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Systems", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/Systems", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/Systems", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/TopologyLinks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/TopologyLinks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/TopologyLinks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/TopologyLinks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/VPODs", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/VPODs", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/VPODs", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/VPODs", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/SDIPods/*/VPODs", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/SDIPods/*/VPODs", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches/*/ExternalLinks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches/*/ExternalLinks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches/*/ExternalLinks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches/*/ExternalLinks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches/*/ExternalLinks/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches/*/ExternalLinks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches/*/ExternalLinks/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches/*/ExternalLinks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches/*/Pims", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches/*/Pims", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches/*/Pims", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches/*/Pims", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches/*/Pims/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches/*/Pims/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/Switches/*/Pims/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/Switches/*/Pims/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/TopologyLinks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/TopologyLinks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/TopologyLinks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/TopologyLinks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/TopologyLinks/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/TopologyLinks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/TopologyLinks/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/TopologyLinks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*", ["/"], input.resource)
 	"PATCH" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.Allocate", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.Allocate", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.ConnectManualSelectedPorts", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.ConnectManualSelectedPorts", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.CreateL2Network", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.CreateL2Network", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.CreateL2NetworkWithAutomaticConnectivityForAllPorts", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.CreateL2NetworkWithAutomaticConnectivityForAllPorts", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.CreateL2NetworkWithAutomaticConnectivityForSelectedPorts", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.CreateL2NetworkWithAutomaticConnectivityForSelectedPorts", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.Deallocate", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.Deallocate", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.DisconnectManualSelectedPorts", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Actions/Ericsson2VPOD.DisconnectManualSelectedPorts", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Networks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Networks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Networks", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Networks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Networks/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Networks/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Networks/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Networks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Networks/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Networks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Networks/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Networks/*", ["/"], input.resource)
 	"PATCH" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Systems", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Systems", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Systems", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Systems", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Systems/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Systems/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Oem/Ericsson_2/VPODs/*/Systems/*", ["/"], __local15__1)
+	glob.match("Oem/Ericsson_2/VPODs/*/Systems/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems", ["/"], __local15__1)
+	glob.match("Systems", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems", ["/"], __local15__1)
+	glob.match("Systems", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*", ["/"], __local15__1)
+	glob.match("Systems/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*", ["/"], __local15__1)
+	glob.match("Systems/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*", ["/"], __local15__1)
+	glob.match("Systems/*", ["/"], input.resource)
 	"PATCH" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Actions/ComputerSystem.Reset", ["/"], __local15__1)
+	glob.match("Systems/*/Actions/ComputerSystem.Reset", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Actions/Oem/Ericsson2ComputerSystem.BootSourceOverride", ["/"], __local15__1)
+	glob.match("Systems/*/Actions/Oem/Ericsson2ComputerSystem.BootSourceOverride", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/EthernetInterfaces", ["/"], __local15__1)
+	glob.match("Systems/*/EthernetInterfaces", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/EthernetInterfaces", ["/"], __local15__1)
+	glob.match("Systems/*/EthernetInterfaces", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/EthernetInterfaces/*", ["/"], __local15__1)
+	glob.match("Systems/*/EthernetInterfaces/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/EthernetInterfaces/*", ["/"], __local15__1)
+	glob.match("Systems/*/EthernetInterfaces/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Memory", ["/"], __local15__1)
+	glob.match("Systems/*/Memory", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Memory", ["/"], __local15__1)
+	glob.match("Systems/*/Memory", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Memory/*", ["/"], __local15__1)
+	glob.match("Systems/*/Memory/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Memory/*", ["/"], __local15__1)
+	glob.match("Systems/*/Memory/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Oem/Ericsson_2/FwComponents", ["/"], __local15__1)
+	glob.match("Systems/*/Oem/Ericsson_2/FwComponents", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Oem/Ericsson_2/FwComponents", ["/"], __local15__1)
+	glob.match("Systems/*/Oem/Ericsson_2/FwComponents", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Oem/Ericsson_2/FwComponents/*", ["/"], __local15__1)
+	glob.match("Systems/*/Oem/Ericsson_2/FwComponents/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Oem/Ericsson_2/FwComponents/*", ["/"], __local15__1)
+	glob.match("Systems/*/Oem/Ericsson_2/FwComponents/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Processors", ["/"], __local15__1)
+	glob.match("Systems/*/Processors", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Processors", ["/"], __local15__1)
+	glob.match("Systems/*/Processors", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Processors/*", ["/"], __local15__1)
+	glob.match("Systems/*/Processors/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/Processors/*", ["/"], __local15__1)
+	glob.match("Systems/*/Processors/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/ResetActionInfo", ["/"], __local15__1)
+	glob.match("Systems/*/ResetActionInfo", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/ResetActionInfo", ["/"], __local15__1)
+	glob.match("Systems/*/ResetActionInfo", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/SimpleStorage", ["/"], __local15__1)
+	glob.match("Systems/*/SimpleStorage", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/SimpleStorage", ["/"], __local15__1)
+	glob.match("Systems/*/SimpleStorage", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/SimpleStorage/*", ["/"], __local15__1)
+	glob.match("Systems/*/SimpleStorage/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("Systems/*/SimpleStorage/*", ["/"], __local15__1)
+	glob.match("Systems/*/SimpleStorage/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService", ["/"], __local15__1)
+	glob.match("TaskService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService", ["/"], __local15__1)
+	glob.match("TaskService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"DeleteJob" = __local1__1
+	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService", ["/"], __local15__1)
+	glob.match("TaskService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService", ["/"], __local15__1)
+	glob.match("TaskService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService", ["/"], __local15__1)
+	glob.match("TaskService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks", ["/"], __local15__1)
+	glob.match("TaskService/Tasks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks", ["/"], __local15__1)
+	glob.match("TaskService/Tasks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"DeleteJob" = __local1__1
+	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks", ["/"], __local15__1)
+	glob.match("TaskService/Tasks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks", ["/"], __local15__1)
+	glob.match("TaskService/Tasks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks", ["/"], __local15__1)
+	glob.match("TaskService/Tasks", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"DeleteJob" = __local1__1
+	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*/monitor", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*/monitor", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"CreateJob" = __local1__1
+	"CreateJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*/monitor", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*/monitor", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"DeleteJob" = __local1__1
+	"DeleteJob" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*/monitor", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*/monitor", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*/monitor", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*/monitor", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSecurityAdministrator" = __local1__1
+	"OmcSecurityAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("TaskService/Tasks/*/monitor", ["/"], __local15__1)
+	glob.match("TaskService/Tasks/*/monitor", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcSystemAdministrator" = __local1__1
+	"OmcSystemAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("UpdateService", ["/"], __local15__1)
+	glob.match("UpdateService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("UpdateService", ["/"], __local15__1)
+	glob.match("UpdateService", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("UpdateService/Oem/Ericsson_2/Packages", ["/"], __local15__1)
+	glob.match("UpdateService/Oem/Ericsson_2/Packages", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("UpdateService/Oem/Ericsson_2/Packages", ["/"], __local15__1)
+	glob.match("UpdateService/Oem/Ericsson_2/Packages", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("UpdateService/Oem/Ericsson_2/Packages/*", ["/"], __local15__1)
+	glob.match("UpdateService/Oem/Ericsson_2/Packages/*", ["/"], input.resource)
 	"DELETE" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("UpdateService/Oem/Ericsson_2/Packages/*", ["/"], __local15__1)
+	glob.match("UpdateService/Oem/Ericsson_2/Packages/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("UpdateService/Oem/Ericsson_2/Packages/*", ["/"], __local15__1)
+	glob.match("UpdateService/Oem/Ericsson_2/Packages/*", ["/"], input.resource)
 	"GET" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentObserver" = __local1__1
+	"OmcEquipmentObserver" = input.roles[__local0__1]
 }
 
 allow {
-	__local15__1 = input.resource
-	glob.match("files/upload/updateservice/package", ["/"], __local15__1)
+	glob.match("files/upload/updateservice/package", ["/"], input.resource)
 	"POST" = input.method
-	__local1__1 = input.roles[__local0__1]
-	"OmcEquipmentAdministrator" = __local1__1
+	"OmcEquipmentAdministrator" = input.roles[__local0__1]
 }

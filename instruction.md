@@ -18,7 +18,7 @@ curl -X POST --data-binary @test_input6.json 'http://localhost:9191/v1/data/auth
 
 * curl -H "Authorization: Bearer 21ad4323-f187-4237-9b88-1e0aa6a4599d" -X POST --data-binary @test_input1.json 'http://localhost:8181/v1/data/authz/redfish/v1/policy?metrics'| jq
 
-* curl -H "Authorization: Bearer 21ad4323-f187-4237-9b88-1e0aa6a4599d" -X POST --data-binary @test_input1.json 'http://b303-omc-01.pcl.seki.gic.ericsson.se:32323/v1/data/authz/redfish/v1/policy?metrics'| jq
+* curl -H "Authorization: Bearer 21ad4323-f187-4237-9b88-1e0aa6a4599d" -X POST --data-binary @test_input3.json 'http://b303-omc-01.pcl.seki.gic.ericsson.se:32323/v1/data/authz/redfish/v1/policy?metrics'| jq
 
 * curl -H "Authorization: Bearer 21ad4323-f187-4237-9b88-1e0aa6a4599d" -X POST --data-binary @test_input1.json 'http://b303-omc-01.pcl.seki.gic.ericsson.se:32323/v1/data/authz/redfish/v1/policy?metrics'| jq
 * 

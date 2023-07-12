@@ -9,7 +9,7 @@ you will get bundle.tar.gz
 
 * /home/epraria/programs/opa_linux_amd64_v0.53 run bundle.tar.gz --server --addr localhost:8181
 
-* curl -X POST --data-binary @test-2.json http://testserver:32323/v1/data/authz/redfish/v1/policy
+* curl -X POST --data-binary @test-2.json http://b303-omc-01.pcl.seki.gic.ericsson.se:32323/v1/data/authz/redfish/v1/policy
 
 * curl --no-buffer -XPOST --unix-socket /home/epraria/programs/socket http://localhost/events
 
@@ -19,4 +19,4 @@ curl -X POST --data-binary @test_input1.json --unix-socket /home/epraria/program
 
 
 
-/home/epraria/programs/opa_linux_amd64_v0.53.1 build -b -O=2 . --entrypoint authz/redfish/v1/policy --entrypoint authz/redfish/v1/fine/policy
+/home/epraria/programs/opa_linux_amd64_0.54 build -b -O=2 . --entrypoint authz/redfish/v1/policy --entrypoint authz/redfish/v1/fine/policy
